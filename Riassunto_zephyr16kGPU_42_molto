@@ -1,0 +1,1123 @@
+Xerver Double Slash Authentication Bypass
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: The Xerver server on the remote host is vulnerable to a Double Slash Authentication Bypass, allowing unauthenticated attackers to bypass authentication and access protected web directories by appending an extra slash to the directory path. This issue carries a high risk factor with a CVSS3 score of 7.5 and CVSS3 vector of CVSS2#AV:N/AC:L/Au:N/C:P/I:P/A:P. As this version of Xerver may also have other unverified vulnerabilities, immediate action is recommended. There is currently no known solution to mitigate this vulnerability. The affected IP addresses and ports include: ['10.16.2.31', 'tcp/443'], ['10.16.2.30', 'tcp/443 tcp/80'], ['192.168.2.31', 'tcp/443'], ['192.168.2.30', 'tcp/443 tcp/80'], ['77.44.11.31', 'tcp/443'], ['77.44.11.30', 'tcp/443 tcp/80'], and ['22.34.18.31', 'tcp/443'], ['22.34.18.30', 'tcp/443 tcp/80']. It is advised to prioritize remediation efforts and monitor for further updates on potential additional vulnerabilities.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sommario: Il server Xerver sull'host remoto è vulnerabile a un Bypass di autenticazione Double Slash, consentendo agli aggressori non autenticati di bypassare l'autenticazione e accedere alle directory Web protette aggiungendo una barra aggiuntiva al percorso della directory. Questo problema comporta un fattore di rischio elevato con un punteggio CVSS3 di 7,5 e un vettore CVSS3 di CVSS2AV:N/AC:L/Au:N/C:P/I:P/A:P. Poiché questa versione di Xerver potrebbe anche avere altre vulnerabilità non verificate, è consigliabile un'azione immediata. Attualmente non esiste una soluzione nota per mitigare questa vulnerabilità. Gli indirizzi IP e le porte interessate includono: [''10.16.2.31', 'tcp/443'], ['10.16.2.30', 'tcp/443 tcp/80'], ['192.168.2.31', 'tcp/443t', [''192.168.2.30', 'tcp/443 tcp/80''], ['''''432.11.43. Si consiglia di dare priorità agli sforzi di riparazione e monitorare ulteriori aggiornamenti sulle potenziali vulnerabilità aggiuntive.
+ Lista mancanti:
+ Host: 77.44.11.31 Port:tcp/443
+  Host: 77.44.11.30 Port:tcp/443 tcp/80
+  Host: 22.34.18.31 Port:tcp/443
+  Host: 22.34.18.30 Port:tcp/443 tcp/80
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SSL Self-Signed Certificate
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary:
+
+A vulnerability has been identified in multiple servers running SSL services with self-signed certificates, which renders SSL encryption ineffective as it allows for man-in-the-middle attacks by unauthorized parties. This issue has a CVSS3 score of 6.4 and a medium risk level. The severity is rated as high (2) as the absence of a recognized certificate authority makes it possible for attackers to intercept and read sensitive data. The recommended solution is to obtain or generate a valid SSL certificate for each affected server.
+
+Affected servers:
+- 10.16.2.31 (tcp/443)
+- 10.16.2.30 (tcp/443)
+- 10.16.2.22 (tcp/443)
+- 10.16.2.21 (tcp/443)
+- 10.16.2.11 (tcp/443)
+- 10.16.2.3 (tcp/443)
+- 10.16.2.2 (tcp/443)
+- 10.16.2.1 (tcp/443)
+- 192.168.2.31 (tcp/443)
+- 192.168.2.30 (tcp/443)
+- 192.168.2.22 (tcp/443)
+- 192.168.2.21 (tcp/443)
+- 192.168.2.11 (tcp/443)
+- 192.168.2.3 (tcp/443)
+- 192.168.2.2 (tcp/443)
+- 192.168.2.1 (tcp/443)
+- 77.44.11.31 (tcp/443)
+- 77.44.11.30 (tcp/443)
+- 77.44.11.22 (tcp/443)
+- 77.44.11.21 (tcp/443)
+- 77.44.11.11 (tcp/443)
+- 77.44.11.3 (tcp/443)
+- 77.44.11.2 (tcp/443)
+- 77.44.11.1 (tcp/443)
+- 22.34.18.31 (tcp/443)
+- 22.34.18.30 (tcp/443)
+- 22.34.18.22 (tcp/443)
+- 22.34.18.21 (tcp/443)
+- 22.34.18.11 (tcp/443)
+- 22.34.18.3 (tcp/443)
+- 22.34.18.2 (tcp/443)
+- 22.34.18.1 (tcp/443)
+
+CVSS3 Vector: CVSS2#AV:N/AC:L/Au:N/C:P/I:P/A:N
+CVSS3 Score: 6.4
+Risk Factor: Medium
+
+Description:
+
+The SSL Self-Signed Certificate vulnerability occurs when the X.509 certificate chain for an SSL service is not signed by a recognized certificate authority. This issue allows an attacker to establish a man-in-the-middle attack, as the lack of verification by a trusted authority makes it easy for an attacker to spoof the remote host. This vulnerability does not only apply to self-signed certificates, but also to certificates signed by an unrecognized certificate authority. To mitigate this risk, it is strongly recommended to acquire or generate a legitimate SSL certificate for each affected server.
+
+Solution:
+
+The recommended solution to address this vulnerability is to acquire or generate a valid SSL certificate for each server running an SSL service. This will ensure that the SSL encryption is effective, and data transmitted between clients and servers is securely encrypted, making it difficult for attackers to intercept and read sensitive data. It is essential to obtain a certificate from a trusted certificate authority to prevent man-in-the-middle attacks and ensure the integrity and confidentiality of data. The affected servers and their corresponding ports are listed below for reference:
+
+- 10.16.2.31 (tcp/443)
+- 10.16.2.30 (tcp/443)
+- 10.16.2.22 (tcp/443)
+- 10.16.2.21 (tcp/443)
+- 10.16.2.11 (tcp/443)
+- 10.16.2.3 (tcp/443)
+- 10.16.2.2 (tcp/443)
+- 10.16.2.1 (tcp/443)
+- 192.168.2.31 (tcp/443)
+- 192.168.2.30 (tcp/443)
+- 192.168.2.22 (tcp/443)
+- 192.168.2.21 (tcp/443)
+- 192.168.2.11 (tcp/443)
+- 192.168.2.3 (tcp/443)
+- 192.168.2.2 (tcp/443)
+- 192.168.2.1 (tcp/443)
+- 77.44.11.31 (tcp/443)
+- 77.44.11.30 (tcp/443)
+- 77.44.11.22 (tcp/443)
+- 77.44.11.21 (tcp/443)
+- 77.44.11.11 (tcp/443)
+- 77.44.11.3 (tcp/443)
+- 77.44.11.2 (tcp/443)
+- 77.44.11.1 (tcp/443)
+- 22.34.18.31 (tcp/443)
+- 22.34.18.30 (tcp/443)
+- 22.34.18.22 (tcp/443)
+- 22.34.18.21 (tcp/443)
+- 22.34.18.11 (tcp/443)
+- 22.34.18.3 (tcp/443)
+- 22.34.18.2 (tcp/443)
+- 22.34.18.1 (tcp/443)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sommario:
+
+Una vulnerabilità è stata identificata in più server che eseguono servizi SSL con certificati autofirmati, il che rende la crittografia SSL inefficace in quanto consente attacchi man-in-the-middle da parte di parti non autorizzate. Questo problema ha un punteggio CVSS3 di 6.4 e un livello di rischio medio. La gravità è valutata come alta (2) in quanto l'assenza di un'autorità di certificazione riconosciuta consente agli aggressori di intercettare e leggere dati sensibili. La soluzione consigliata è quella di ottenere o generare un certificato SSL valido per ogni server interessato.
+
+Server interessati:
+- 10.16.2.31 (tcp/443)
+- 10.16.2.30 (tcp/443)
+- 10.16.2.22 (tcp/443)
+- 10.16.2.21 (tcp/443)
+- 10.16.2.11 (tcp/443)
+- 10.16.2.3 (tcp/443)
+- 10.16.2.2 (tcp/443)
+- 10.16.2.1 (tcp/443)
+- 192.168.2.31 (tcp/443)
+- 192.168.2.30 (tcp/443)
+- 192.168.2.22 (tcp/443)
+- 192.168.2.21 (tcp/443)
+- 192.168.2.11 (tcp/443)
+- 192.168.2.3 (tcp/443)
+- 192.168.2.2 (tcp/443)
+- 192.168.2.1 (tcp/443)
+- 77.44.11.31 (tcp/443)
+- 77.44.11.30 (tcp/443)
+- 77.44.11.22 (tcp/443)
+- 77.44.11.21 (tcp/443)
+- 77.44.11.11 (tcp/443)
+- 77.44.11.3 (tcp/443)
+- 77.44.11.2 (tcp/443)
+- 77.44.11.1 (tcp/443)
+- 22.34.18.31 (tcp/443)
+- 22.34.18.30 (tcp/443)
+- 22.34.18.22 (tcp/443)
+- 22.34.18.21 (tcp/443)
+- 22.34.18.11 (tcp/443)
+- 22.34.18.3 (tcp/443)
+- 22.34.18.2 (tcp/443)
+- 22.34.18.1 (tcp/443)
+
+CVSS3 Vector: CVSS2AV:N/AC:L/Au:N/C:P/I:P/A:N
+Punteggio CVSS3: 6.4
+Fattore di rischio: Medio
+
+Descrizione:
+
+La vulnerabilità SSL Self-Signed Certificate si verifica quando la catena di certificati X.509 per un servizio SSL non è firmata da un'autorità di certificazione riconosciuta. Questo problema consente a un utente malintenzionato di stabilire un attacco man-in-the-middle, poiché la mancanza di verifica da parte di un'autorità attendibile rende facile per un utente malintenzionato falsificare l'host remoto. Questa vulnerabilità non si applica solo ai certificati autofirmati, ma anche ai certificati firmati da un'autorità di certificazione non riconosciuta. Per mitigare questo rischio, si consiglia vivamente di acquisire o generare un certificato SSL legittimo per ciascun server interessato.
+
+Soluzione:
+
+La soluzione consigliata per risolvere questa vulnerabilità è quella di acquisire o generare un certificato SSL valido per ogni server che esegue un servizio SSL. Ciò garantirà che la crittografia SSL sia efficace e che i dati trasmessi tra client e server siano crittografati in modo sicuro, rendendo difficile per gli aggressori intercettare e leggere i dati sensibili. È essenziale ottenere un certificato da un'autorità di certificazione affidabile per prevenire attacchi man-in-the-middle e garantire l'integrità e la riservatezza dei dati. I server interessati e le relative porte sono elencati di seguito per riferimento:
+
+- 10.16.2.31 (tcp/443)
+- 10.16.2.30 (tcp/443)
+- 10.16.2.22 (tcp/443)
+- 10.16.2.21 (tcp/443)
+- 10.16.2.11 (tcp/443)
+- 10.16.2.3 (tcp/443)
+- 10.16.2.2 (tcp/443)
+- 10.16.2.1 (tcp/443)
+- 192.168.2.31 (tcp/443)
+- 192.168.2.30 (tcp/443)
+- 192.168.2.22 (tcp/443)
+- 192.168.2.21 (tcp/443)
+- 192.168.2.11 (tcp/443)
+- 192.168.2.3 (tcp/443)
+- 192.168.2.2 (tcp/443)
+- 192.168.2.1 (tcp/443)
+- 77.44.11.31 (tcp/443)
+- 77.44.11.30 (tcp/443)
+- 77.44.11.22 (tcp/443)
+- 77.44.11.21 (tcp/443)
+- 77.44.11.11 (tcp/443)
+- 77.44.11.3 (tcp/443)
+- 77.44.11.2 (tcp/443)
+- 77.44.11.1 (tcp/443)
+- 22.34.18.31 (tcp/443)
+- 22.34.18.30 (tcp/443)
+- 22.34.18.22 (tcp/443)
+- 22.34.18.21 (tcp/443)
+- 22.34.18.11 (tcp/443)
+- 22.34.18.3 (tcp/443)
+- 22.34.18.2 (tcp/443)
+- 22.34.18.1 (tcp/443)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SSL Certificate Cannot Be Trusted
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary:
+
+The identified vulnerability is the "SSL Certificate Cannot Be Trusted" issue, where the server's X.509 certificate cannot be verified, making it challenging for users to establish the authenticity and identity of the web server. This can result in easier man-in-the-middle attacks if the remote host is in production. The cause could be a broken chain of trust, either due to an unrecognized self-signed certificate, a missing intermediate certificate, an outdated certificate, or a signature that cannot be verified. The severity level is rated as medium (2) with a CVSS3 score of 6.4 and a vector of CVSS2#AV:N/AC:L/Au:N/C:P/I:P/A:N. To mitigate this vulnerability, it is recommended to obtain or generate a proper SSL certificate for the affected service. The following IP addresses and ports require attention: 10.16.2.31, 10.16.2.30, 10.16.2.22, 10.16.2.21, 10.16.2.11, 10.16.2.3, 10.16.2.2, 10.16.2.1, 192.168.2.31, 192.168.2.30, 192.168.2.22, 192.168.2.21, 192.168.2.11, 192.168.2.3, 192.168.2.2, 192.168.2.1, 77.44.11.31, 77.44.11.30, 77.44.11.22, 77.44.11.21, 77.44.11.11, 77.44.11.3, 77.44.11.2, 77.44.11.1, 22.34.18.31, 22.34.18.30, 22.34.18.22, 22.34.18.21, 22.34.18.11, 22.34.18.3, and 22.34.18.2. The severity level suggests that this issue should be addressed as soon as possible to minimize potential risks.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sommario:
+
+La vulnerabilità identificata è il problema "Certificato SSL non può essere attendibile", in cui il certificato X.509 del server non può essere verificato, rendendo difficile per gli utenti stabilire l'autenticità e l'identità del server web. Ciò può comportare attacchi man-in-the-middle più facili se l'host remoto è in produzione. La causa potrebbe essere una catena di fiducia rotta, a causa di un certificato autofirmato non riconosciuto, un certificato intermedio mancante, un certificato obsoleto o una firma che non può essere verificata. Il livello di gravità è valutato come medio (2) con un punteggio CVSS3 di 6.4 e un vettore di CVSS2AV:N/AC:L/Au:N/C:P/I:P/A:N. Per mitigare questa vulnerabilità, si consiglia di ottenere o generare un certificato SSL adeguato per il servizio interessato. I seguenti indirizzi IP e porte richiedono attenzione: 10.16.2.1.31, 10.16.2.1.30, 10.16.2.22, 22.16.2.111, 10.16.2.2.1, 192.168.2.31, 192.168.2.30, 192.118.2.2, 192.168.2.21, 22.122.11, 192.168.2.21, 192.168.2.1.2.1, 192.168.2.3, 192.12.18. Il livello di gravità suggerisce che questo problema dovrebbe essere affrontato il più presto possibile per ridurre al minimo i potenziali rischi.
+ Lista mancanti:
+ Host: 10.16.2.31 Port:tcp/443
+  Host: 10.16.2.30 Port:tcp/443
+  Host: 10.16.2.21 Port:tcp/443
+  Host: 10.16.2.11 Port:tcp/443
+  Host: 10.16.2.3 Port:tcp/443
+  Host: 192.168.2.22 Port:tcp/443
+  Host: 192.168.2.11 Port:tcp/443
+  Host: 192.168.2.2 Port:tcp/443
+  Host: 77.44.11.31 Port:tcp/443
+  Host: 77.44.11.30 Port:tcp/443
+  Host: 77.44.11.22 Port:tcp/443
+  Host: 77.44.11.21 Port:tcp/443
+  Host: 77.44.11.11 Port:tcp/443
+  Host: 77.44.11.3 Port:tcp/443
+  Host: 77.44.11.2 Port:tcp/443
+  Host: 77.44.11.1 Port:tcp/443
+  Host: 22.34.18.31 Port:tcp/443
+  Host: 22.34.18.30 Port:tcp/443
+  Host: 22.34.18.22 Port:tcp/443
+  Host: 22.34.18.21 Port:tcp/443
+  Host: 22.34.18.11 Port:tcp/443
+  Host: 22.34.18.3 Port:tcp/443
+  Host: 22.34.18.2 Port:tcp/443
+  Host: 22.34.18.1 Port:tcp/443
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SSL Certificate Signed Using Weak Hashing Algorithm
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: Our network has multiple servers running SSL services with SSL certificates signed using weak hashing algorithms, specifically MD2, MD4, MD5, or SHA1. These algorithms are vulnerable to collision attacks, allowing an attacker to impersonate these services. This issue affects servers with IP addresses 10.16.2.31, 10.16.2.22, 10.16.2.21, 10.16.2.11, 10.16.2.3, 10.16.2.2, 10.16.2.1, 192.168.2.31, 192.168.2.22, 192.168.2.21, 192.168.2.11, 192.168.2.3, 192.168.2.2, 192.168.2.1, 77.44.11.31, 77.44.11.22, 77.44.11.21, 77.44.11.11, 77.44.11.3, 77.44.11.2, and 22.34.18.31, 22.34.18.22, 22.34.18.21, 22.34.18.11, 22.34.18.3, and 22.34.18.2. The CVSS3 score for this vulnerability is 5.0, indicating a medium risk factor. Google has set a deadline of January 1, 2017 for phasing out SHA1 certificates, and we recommend contacting the Certificate Authority to obtain new certificates signed with a stronger hashing algorithm. This issue has been reported in accordance with Google's policy. Certificates contained in the Nessus CA database have been ignored.
+
+Description: The SSL certificates used by these servers were signed using weak hashing algorithms, such as MD2, MD4, or SHA1, which are known to be vulnerable to collision attacks. Collision attacks allow attackers to generate new certificates with the same digital signature as the original, making it possible for them to impersonate the affected services. As a result, the integrity and authenticity of these certificates can be compromised. To mitigate this vulnerability, it is necessary to obtain new certificates signed with a stronger hashing algorithm from the Certificate Authority. This will help ensure the continued security and trustworthiness of the SSL services.
+
+Severity: The severity of this vulnerability is rated 2, indicating a medium level of urgency.
+
+Solution: To address this issue, contact the Certificate Authority that issued the SSL certificates and request that they be reissued using a stronger hashing algorithm, such as SHA256 or SHA512. This will prevent attackers from exploiting the weaknesses of the currently used weak algorithms. We recommend prioritizing servers with IP addresses 10.16.2.31, 10.16.2.22, 10.16.2.21, 10.16.2.11, 10.16.2.3, 10.16.2.2, 10.16.2.1, 192.168.2.31, 192.168.2.22, 192.168.2.21, 192.168.2.11, 192.168.2.3, 192.168.2.2, 77.44.11.31, 77.44.11.22, 77.44.11.21, 77.44.11.11, 77.44.11.3, 77.44.11.2, and 22.34.18.31, 22.34.18.22, 22.34.18.21, 22.34.18.11, 22.34.18.3, and 22.34.18.2.
+
+CVSS3 Score: The Common Vulnerability Scoring System (CVSS) score for this vulnerability is 5.0. The CVSS3 vector is CVSS2#AV:N/AC:L/Au:N/C:N/I:P, indicating that this is a network-based issue with no authentication required, local access required, no confidentiality impact, and partial availability impact.
+
+Risk Factor: The risk factor for this issue is medium, meaning that it poses a significant threat to the security and integrity of the SSL services on these servers. It is recommended that remediation efforts are initiated promptly to mitigate this vulnerability.
+
+List of Affected IP Addresses:
+- 10.16.2.31, TCP Port 443
+- 10.16.2.22, TCP Port 443
+- 10.16.2.21, TCP Port 443
+- 10.16.2.11, TCP Port 443
+- 10.16.2.3, TCP Port 443
+- 10.16.2.2, TCP Port 443
+- 10.16.2.1, TCP Port 443
+- 192.168.2.31, TCP Port 443
+- 192.168.2.22, TCP Port 443
+- 192.168.2.21, TCP Port 443
+- 192.168.2.11, TCP Port 443
+- 192.168.2.3, TCP Port 443
+- 192.168.2.2, TCP Port 443
+- 192.168.2.1, TCP Port 443
+- 77.44.11.31, TCP Port 443
+- 77.44.11.22, TCP Port 443
+- 77.44.11.21, TCP Port 443
+- 77.44.11.11, TCP Port 443
+- 77.44.11.3, TCP Port 443
+- 77.44.11.2, TCP Port 443
+- 77.44.11.1, TCP Port 443
+- 22.34.18.31, TCP Port 443
+- 22.34.18.22, TCP Port 443
+- 22.34.18.21, TCP Port 443
+- 22.34.18.11, TCP Port 443
+- 22.34.18.3, TCP Port 443
+- 22.34.18.2, TCP Port 443
+- 22.34.18.1, TCP Port 443
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Riepilogo: La nostra rete ha più server che eseguono servizi SSL con certificati SSL firmati utilizzando algoritmi di hashing deboli, in particolare MD2, MD4, MD5 o SHA1. Questi algoritmi sono vulnerabili agli attacchi di collisione, consentendo a un utente malintenzionato di impersonare questi servizi. Questo problema riguarda i server con indirizzi IP 10.16.2.31, 10.16.2.222, 10.16.2.21, 10.16.2.3, 10.16.2.2, 10.16.2.1, 192.168.2.31, 192.168.2.22, 192.168.2.11, 192.168.2.11, 192.168.2.3, 192.168.2.2, 192.168.2.1, 77.44.11, 192.18.2, 192.11. Il punteggio CVSS3 per questa vulnerabilità è 5.0, indicando un fattore di rischio medio. Google ha fissato una scadenza del 1 ° gennaio 2017 per l'eliminazione graduale dei certificati SHA1, e si consiglia di contattare l'Autorità di certificazione per ottenere nuovi certificati firmati con un algoritmo di hashing più forte. Questo problema è stato segnalato in conformità con la politica di Google. I certificati contenuti nel database Nessus CA sono stati ignorati.
+
+Descrizione: I certificati SSL utilizzati da questi server sono stati firmati utilizzando algoritmi di hashing deboli, come MD2, MD4 o SHA1, che sono noti per essere vulnerabili agli attacchi di collisione. Gli attacchi di collisione consentono agli aggressori di generare nuovi certificati con la stessa firma digitale dell'originale, rendendo possibile l'impersonificazione dei servizi interessati. Di conseguenza, l'integrità e l'autenticità di questi certificati possono essere compromesse. Per mitigare questa vulnerabilità, è necessario ottenere nuovi certificati firmati con un algoritmo di hashing più forte dall'autorità di certificazione. Ciò contribuirà a garantire la sicurezza e l'affidabilità continua dei servizi SSL.
+
+Gravità: la gravità di questa vulnerabilità è valutata 2, indicando un livello medio di urgenza.
+
+Soluzione: per risolvere questo problema, contattare l'autorità di certificazione che ha emesso i certificati SSL e richiedere che vengano ripubblicati utilizzando un algoritmo di hashing più forte, come SHA256 o SHA512. Ciò impedirà agli aggressori di sfruttare le debolezze degli algoritmi deboli attualmente utilizzati. Si consiglia di dare priorità ai server con indirizzi IP 10.16.2.31, 10.16.2.222, 10.16.2.21, 10.6.2.1, 10.16.2.2, 10.16.2.1, 192.168.2.31, 192.168.2.222, 192.168.2.21, 192.168.2.3, 192.168.2.2, 192.168.2.2, 77.44.11.31, 77.44.2.1
+
+Punteggio CVSS3: il punteggio del Common Vulnerability Scoring System (CVSS) per questa vulnerabilità è 5.0. Il vettore CVSS3 è CVSS2AV:N/AC:L/Au:N/C:N/I:P, indicando che si tratta di un problema basato sulla rete senza autenticazione richiesta, accesso locale richiesto, nessun impatto di riservatezza e impatto parziale sulla disponibilità.
+
+Fattore di rischio: il fattore di rischio per questo problema è medio, il che significa che rappresenta una minaccia significativa per la sicurezza e l'integrità dei servizi SSL su questi server. Si raccomanda di avviare tempestivamente gli sforzi di risanamento per mitigare questa vulnerabilità.
+
+Elenco degli indirizzi IP interessati:
+- 10.16.2.31, TCP Port 443
+- 10.16.2.22, TCP Port 443
+- 10.16.2.21, TCP Port 443
+- 10.16.2.11, TCP Port 443
+- 10.16.2.3, TCP Port 443
+- 10.16.2.2, TCP Port 443
+- 10.16.2.1, TCP Port 443
+- 192.168.2.31, TCP Port 443
+- 192.168.2.22, TCP Port 443
+- 192.168.2.21, TCP Port 443
+- 192.168.2.11, TCP Port 443
+- 192.168.2.3, TCP Port 443
+- 192.168.2.2, TCP Port 443
+- 192.168.2.1, TCP Port 443
+- 77.44.11.31, TCP Port 443
+- 77.44.11.22, TCP Port 443
+- 77.44.11.21, TCP Port 443
+- 77.44.11.11, TCP Port 443
+- 77.44.11.3, TCP Port 443
+- 77.44.11.2, TCP Port 443
+- 77.44.11.1, TCP Port 443
+- 22.34.18.31, TCP Port 443
+- 22.34.18.22, TCP Port 443
+- 22.34.18.21, TCP Port 443
+- 22.34.18.11, TCP Port 443
+- 22.34.18.3, TCP Port 443
+- 22.34.18.2, TCP Port 443
+- 22.34.18.1, TCP Port 443
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SSL 64-bit Block Size Cipher Suites Supported (SWEET32)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: The identified vulnerability, SSL 64-bit Block Size Cipher Suites Supported (SWEET32), allows attackers to leak sensitive information such as authentication cookies through a man-in-the-middle attack due to the use of weak 64-bit block ciphers. This vulnerability can result in session hijacking. The CVSS3 score is 5.0, classified as a Medium risk factor. To mitigate the issue, either reconfigure the affected application or limit the number of requests allowed per TLS connection. IP addresses with potential exposure include: 10.16.2.31, 10.16.2.30, 10.16.2.22, 10.16.2.21, 10.16.2.11, 10.16.2.3, 10.16.2.2, 10.16.2.1, 192.168.2.31, 192.168.2.30, 192.168.2.22, 192.168.2.21, 192.168.2.11, 192.168.2.3, 192.168.2.2, 192.168.2.1, 77.44.11.31, 77.44.11.30, 77.44.11.22, 77.44.11.21, 77.44.11.11, 77.44.11.3, 77.44.11.2, 77.44.11.1, 22.34.18.31, 22.34.18.30, 22.34.18.22, 22.34.18.21, 22.34.18.11, 22.34.18.3, and 22.34.18.2. Port 443 is affected for all listed IPs.
+
+Description: The remote host supports the use of 64-bit block ciphers in one or more cipher suites, making it susceptible to the SWEET32 vulnerability. This weakness allows a man-in-the-middle attacker with sufficient resources to detect collisions between the fixed secret and a known plaintext via a birthday attack, potentially revealing sensitive information such as HTTPS cookies. The ability to send a large number of requests over the same TLS connection between the client and server is a critical requirement for executing this attack. However, limiting the number of requests allowed per connection could mitigate the issue as Nessus has not yet checked for this mitigation.
+
+Severity: 2 (Moderate)
+
+CVSS3 Score: 5.0
+
+CVSS3 Vector: CVSS2#AV:N/AC:L/Au:N/C:P/I:N
+
+Risk Factor: Medium
+
+Solution: To alleviate this vulnerability, consider avoiding the use of all 64-bit block ciphers by reconfiguring the affected application or limiting the number of requests allowed per TLS connection.
+
+IPs and Ports:
+- 10.16.2.31, port 443
+- 10.16.2.30, port 443
+- 10.16.2.22, port 443
+- 10.16.2.21, port 443
+- 10.16.2.11, port 443
+- 10.16.2.3, port 443
+- 10.16.2.2, port 443
+- 10.16.2.1, port 443
+- 192.168.2.31, port 443
+- 192.168.2.30, port 443
+- 192.168.2.22, port 443
+- 192.168.2.21, port 443
+- 192.168.2.11, port 443
+- 192.168.2.3, port 443
+- 192.168.2.2, port 443
+- 192.168.2.1, port 443
+- 77.44.11.31, port 443
+- 77.44.11.30, port 443
+- 77.44.11.22, port 443
+- 77.44.11.21, port 443
+- 77.44.11.11, port 443
+- 77.44.11.3, port 443
+- 77.44.11.2, port 443
+- 77.44.11.1, port 443
+- 22.34.18.31, port 443
+- 22.34.18.30, port 443
+- 22.34.18.22, port 443
+- 22.34.18.21, port 443
+- 22.34.18.11, port 443
+- 22.34.18.3, port 443
+- 22.34.18.2, port 443
+- 22.34.18.1, port 443
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sommario: La vulnerabilità identificata, SSL 64-bit Block Size Cipher Suites Supported (SWEET32), consente agli aggressori di perdere informazioni sensibili come i cookie di autenticazione attraverso un attacco man-in-the-middle a causa dell'uso di deboli cifrari a 64 bit. Questa vulnerabilità può causare il dirottamento della sessione. Il punteggio CVSS3 è 5.0, classificato come fattore di rischio medio. Per mitigare il problema, riconfigurare l'applicazione interessata o limitare il numero di richieste consentite per connessione TLS. Gli indirizzi IP con potenziale esposizione includono: 10.16.2.1.31, 10.16.2.1.30, 10.16.2.22, 22.122.12.12.1, 222.168.2.12.1.2.1, 192.168.2.1.2, 192.12.168, 192.168.2.12.2, 192.1188.2.2, 192.168.2.21, 192.168.2.11, 192.168.2.1. La porta 443 è interessata per tutti gli IP elencati.
+
+Descrizione: L'host remoto supporta l'uso di cifrari a 64 bit in una o più suite di cifratura, rendendolo suscettibile alla vulnerabilità SWEET32. Questa debolezza consente a un utente malintenzionato con risorse sufficienti per rilevare le collisioni tra il segreto fisso e un testo normale noto tramite un attacco di compleanno, rivelando potenzialmente informazioni sensibili come i cookie HTTPS. La possibilità di inviare un gran numero di richieste sulla stessa connessione TLS tra il client e il server è un requisito fondamentale per l'esecuzione di questo attacco. Tuttavia, limitare il numero di richieste consentite per connessione potrebbe mitigare il problema in quanto Nessus non ha ancora verificato questa mitigazione.
+
+Severità: 2 (moderato)
+
+Punteggio CVSS3: 5.0
+
+Vettore di CVSS3: CVSS2AV:N/AC:L/Au:N/C:P/I:N
+
+Fattore di rischio: Medio
+
+Soluzione: per alleviare questa vulnerabilità, è consigliabile evitare l'uso di tutti i cifrari a blocchi a 64 bit riconfigurando l'applicazione interessata o limitando il numero di richieste consentite per connessione TLS.
+
+IP e porti:
+- 10.16.2.31, port 443
+- 10.16.2.30, port 443
+- 10.16.2.22, port 443
+- 10.16.2.21, port 443
+- 10.16.2.11, port 443
+- 10.16.2.3, port 443
+- 10.16.2.2, port 443
+- 10.16.2.1, port 443
+- 192.168.2.31, port 443
+- 192.168.2.30, port 443
+- 192.168.2.22, port 443
+- 192.168.2.21, port 443
+- 192.168.2.11, port 443
+- 192.168.2.3, port 443
+- 192.168.2.2, port 443
+- 192.168.2.1, port 443
+- 77.44.11.31, port 443
+- 77.44.11.30, port 443
+- 77.44.11.22, port 443
+- 77.44.11.21, port 443
+- 77.44.11.11, port 443
+- 77.44.11.3, port 443
+- 77.44.11.2, port 443
+- 77.44.11.1, port 443
+- 22.34.18.31, port 443
+- 22.34.18.30, port 443
+- 22.34.18.22, port 443
+- 22.34.18.21, port 443
+- 22.34.18.11, port 443
+- 22.34.18.3, port 443
+- 22.34.18.2, port 443
+- 22.34.18.1, port 443
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SSL Medium Strength Cipher Suites Supported (SWEET32)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: The vulnerability "SSL Medium Strength Cipher Suites Supported (SWEET32)" with a CVSS3 score of 5.0 and medium risk factor has been identified. This issue arises due to the remote host supporting SSL ciphers with medium strength encryption, which are weaker than those with 112-bit key lengths or 3DES encryption. Attackers on the same physical network may find it easier to circumvent this encryption. As a solution, it is recommended to reconfigure the affected application if possible to avoid using medium strength ciphers. The following IP addresses and ports require review: 10.16.2.31, 10.16.2.30, 10.16.2.22, 10.16.2.21, 10.16.2.11, 10.16.2.3, 10.16.2.2, 10.16.2.1, 192.168.2.31, 192.168.2.30, 192.168.2.22, 192.168.2.21, 192.168.2.11, 192.168.2.3, 192.168.2.2, 192.168.2.1, 77.44.11.31, 77.44.11.30, 77.44.11.22, 77.44.11.21, 77.44.11.11, 77.44.11.3, 77.44.11.2, 77.44.11.1, 22.34.18.31, 22.34.18.30, 22.34.18.22, 22.34.18.21, 22.34.18.11, 22.34.18.3, and 22.34.18.2. TCP port 443 is affected in all cases. It is advisable to take immediate action to address this issue.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Riepilogo: È stata identificata la vulnerabilità "SSL Medium Strength Cipher Suites Supported (SWEET32)" con un punteggio CVSS3 di 5.0 e un fattore di rischio medio. Questo problema si verifica a causa dell'host remoto che supporta i cifrari SSL con crittografia a media resistenza, che sono più deboli di quelli con lunghezze di chiave a 112 bit o crittografia 3DES. Gli attaccanti sulla stessa rete fisica potrebbero trovare più facile aggirare questa crittografia. Come soluzione, si consiglia di riconfigurare l'applicazione interessata, se possibile, per evitare l'uso di cifrari a media resistenza. I seguenti indirizzi IP e porte richiedono una revisione: 10.16.2.1.31, 10.16.2.1.30, 10.16.2.22, 22.16.2.111, 10.16.2.2.1, 192.168.2.31, 192.168.2.30, 192.118.2.2, 192.168.2.21, 22.131.2.1.2.1, 192.168.2.3, 192.118.2.1, 192.118.2.1. La porta TCP 443 è interessata in tutti i casi. Si consiglia di intraprendere azioni immediate per affrontare questo problema.
+ Lista mancanti:
+ Host: 10.16.2.31 Port:tcp/443
+  Host: 10.16.2.30 Port:tcp/443
+  Host: 10.16.2.21 Port:tcp/443
+  Host: 10.16.2.11 Port:tcp/443
+  Host: 10.16.2.3 Port:tcp/443
+  Host: 192.168.2.22 Port:tcp/443
+  Host: 192.168.2.11 Port:tcp/443
+  Host: 192.168.2.2 Port:tcp/443
+  Host: 192.168.2.1 Port:tcp/443
+  Host: 77.44.11.31 Port:tcp/443
+  Host: 77.44.11.30 Port:tcp/443
+  Host: 77.44.11.22 Port:tcp/443
+  Host: 77.44.11.21 Port:tcp/443
+  Host: 77.44.11.11 Port:tcp/443
+  Host: 77.44.11.3 Port:tcp/443
+  Host: 77.44.11.2 Port:tcp/443
+  Host: 77.44.11.1 Port:tcp/443
+  Host: 22.34.18.31 Port:tcp/443
+  Host: 22.34.18.30 Port:tcp/443
+  Host: 22.34.18.22 Port:tcp/443
+  Host: 22.34.18.21 Port:tcp/443
+  Host: 22.34.18.11 Port:tcp/443
+  Host: 22.34.18.3 Port:tcp/443
+  Host: 22.34.18.2 Port:tcp/443
+  Host: 22.34.18.1 Port:tcp/443
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TLS Version 1.0 Protocol Detection
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The vulnerability "TLS Version 1.0 Protocol Detection" poses a medium risk due to the outdated nature of TLS 1.0, which has cryptographic design flaws that have been mitigated in newer versions like TLS 1.2 and 1.3. Major web browsers and vendors will no longer support endpoints without TLS 1.2 and higher as of March 31, 2020. PCI DSS v3.2 requires disabling TLS 1.0 by June 30, 2018, except for POS POI terminals that are not susceptible to known exploits. The CVSS3 score is 6.1 (Medium) and the vector is CVSS2#AV:N/AC:H/Au:N/C:C/I:P/A:N. The solution is to enable TLS 1.2 and 1.3 and disable TLS 1.0. The following IP addresses and ports should be updated: 10.16.2.31:443, 10.16.2.30:443, 10.16.2.22:443, 10.16.2.21:443, 192.168.2.31:443, 192.168.2.30:443, 192.168.2.22:443, 192.168.2.21:443, 192.168.2.11:443, 77.44.11.31:443, 77.44.11.30:443, 77.44.11.22:443, 77.44.11.21:443, 77.44.11.11:443, 22.34.18.31:443, 22.34.18.30:443, 22.34.18.22:443, and 22.34.18.21:443, 22.34.18.11:443.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+La vulnerabilità "TLS Version 1.0 Protocol Detection" pone un rischio medio a causa della natura obsoleta di TLS 1.0, che ha difetti di progettazione crittografica che sono stati mitigati in versioni più recenti come TLS 1.2 e 1.3. I principali browser web e vendor non supporteranno più gli endpoint senza TLS 1.2 e versioni successive al 31 marzo 2020. PCI DSS v3.2 richiede la disabilitazione di TLS 1.0 entro il 30 giugno 2018, ad eccezione dei terminali POS POI che non sono suscettibili di exploit noti. Il punteggio CVSS3 è 6.1 (Medio) e il vettore è CVSS2AV:N/AC:H/Au:N/C:C/I:P/A:N. The solution is to enable TLS 1.2 and 1.3 and disable TLS 1.0. Gli indirizzi IP e le porte seguenti devono essere aggiornati: 10.16.2.31:443, 10.16.2.30:443, 10.16.2.22:443, 22.162.21.21:443, 192.168.2.311:443, 192.168.43.43, 192.168.2.22.21.43, 192.168.21.43, 77.44.11.43.
+ Lista mancanti:
+ Host: 10.16.2.21 Port:tcp/443
+  Host: 10.16.2.11 Port:tcp/443
+  Host: 192.168.2.31 Port:tcp/443
+  Host: 192.168.2.30 Port:tcp/443
+  Host: 192.168.2.21 Port:tcp/443
+  Host: 192.168.2.11 Port:tcp/443
+  Host: 77.44.11.31 Port:tcp/443
+  Host: 77.44.11.30 Port:tcp/443
+  Host: 77.44.11.22 Port:tcp/443
+  Host: 77.44.11.21 Port:tcp/443
+  Host: 77.44.11.11 Port:tcp/443
+  Host: 22.34.18.31 Port:tcp/443
+  Host: 22.34.18.30 Port:tcp/443
+  Host: 22.34.18.22 Port:tcp/443
+  Host: 22.34.18.21 Port:tcp/443
+  Host: 22.34.18.11 Port:tcp/443
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SSH Weak Algorithms Supported
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: Our network has identified a medium-risk vulnerability related to the SSH Weak Algorithms Supported issue, where the SSH servers on IP addresses 10.16.2.31, 10.16.2.30, 192.168.2.31, 192.168.2.30, 77.44.11.31, 77.44.11.30, and 22.34.18.31, 22.34.18.30 are configured to use the Arcfour stream cipher or no cipher at all, which is discouraged by RFC 4253 due to weaknesses in key generation. The CVSS3 score for this vulnerability is 4.3 and the vector is CVSS2#AV:N/AC:M/Au:N/C:P/I:N. The recommended solution is to contact the vendor or refer to product documentation to remove these weak ciphers. This issue carries a Medium risk factor.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sommario: La nostra rete ha identificato una vulnerabilità a medio rischio legata al problema SSH Debole Algoritmi Supportati, dove i server SSH su indirizzi IP 10.16.2.31, 10.16.2.30, 192.168.2.31, 192.168.2.30, 77.44.11.31, 77.44.11.30, e 22.34.18.31, 22.34.18.30 sono configurati per utilizzare il cifrario Arcfour a cui non è possibile. Il punteggio CVSS3 per questa vulnerabilità è 4.3 e il vettore è CVSS2AV:N/AC:M/Au:N/C:P/I:N. La soluzione consigliata è contattare il fornitore o fare riferimento alla documentazione del prodotto per rimuovere questi cifrari deboli. Questo problema comporta un fattore di rischio medio.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Cisco Wireless LAN Controller Multiple Vulnerabilities
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This vulnerability report highlights multiple security issues affecting Cisco Wireless LAN Controllers (WLCs) that have been identified by Cisco. The first issue, CVE-2018-0417, is a privilege escalation vulnerability resulting from improper parsing of a specific TACACS attribute. A remote attacker with TACACS authentication credentials can create a local administrative account, posing a threat. The second issue, CVE-2018-0441, is a denial of service (DoS) vulnerability caused by flaws in specific timer mechanisms. The third vulnerability, CVE-2018-0442, allows for information disclosure through insufficient checks on Control and Provisioning of Wireless Access Point (CAPWAP) keepalive requests. Lastly, CVE-2018-0443 is a DoS vulnerability due to improper validation of CAPWAP discovery request packets. Cisco has released fixes for these vulnerabilities through bug IDs CSCvf6668, CSCvh65876, CSCve64652, and CSCvf66696. The CVSS3 score for these vulnerabilities is 5.0, and the severity is rated as a medium risk factor. It is recommended that affected WLCs be upgraded to the latest versions to mitigate these issues. The following IP addresses and ports should be checked for potential exploitation: 10.16.2.31 (TCP port 5246), 10.16.2.30 (TCP port 5246), 192.168.2.31 (TCP port 5246), 192.168.2.30 (TCP port 5246), 77.44.11.31 (TCP port 5246), 77.44.11.30 (TCP port 5246), and 22.34.18.31 (TCP port 5246), 22.34.18.30 (TCP port 5246). Cisco's security advisory provides further details on these vulnerabilities.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Questo report sulle vulnerabilità evidenzia diversi problemi di sicurezza che interessano i controller LAN wireless Cisco (WLC) identificati da Cisco. Il primo numero, CVE-2018-0417, è una vulnerabilità di escalation di privilegi derivante da un'analisi impropria di uno specifico attributo TACACS. Un utente malintenzionato remoto con credenziali di autenticazione TACACS può creare un account amministrativo locale, ponendo una minaccia. Il secondo problema, CVE-2018-0441, è una vulnerabilità di tipo Denial of Service (DoS) causata da difetti in specifici meccanismi di timer. La terza vulnerabilità, CVE-2018-0442, consente la divulgazione delle informazioni attraverso controlli insufficienti sul controllo e il provisioning delle richieste di mantenimento dei punti di accesso wireless (CAPWAP). Infine, CVE-2018-0443 è una vulnerabilità DoS a causa di una convalida impropria dei pacchetti di richiesta di scoperta CAPWAP. Cisco ha rilasciato correzioni per queste vulnerabilità tramite gli ID dei bug CSCvf6668, CSCvh65876, CSCve64652 e CSCvf66696. Il punteggio CVSS3 per queste vulnerabilità è 5.0 e la gravità è valutata come fattore di rischio medio. Si raccomanda di aggiornare le WLC interessate alle versioni più recenti per mitigare questi problemi. I seguenti indirizzi IP e porte dovrebbero essere controllati per lo sfruttamento potenziale: 10.16.2.31 (porta TCP 5246), 10.16.2.30 (porta TCP 5246), 192.168.2.31 (porta TCP 5246), 192.168.2.30 (porta TCP 5246), 77.44.11.31 (porta TCP 5246), 77.44.11.30 (porta TCP 5246), e 22.34.18 (porta TCP 5246). Cisco Security Advisory fornisce ulteriori dettagli su queste vulnerabilità.
+ Lista mancanti:
+ Host: 22.34.18.31 Port:tcp/5246
+  Host: 22.34.18.30 Port:tcp/5246
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Cisco Wireless LAN Controller Software Cross-Site Request Forgery (cisco-sa-20190417-wlc-csrf)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: Cisco has released a security advisory (cisco-sa-20190417-wlc-csrf) for a Cross-Site Request Forgery (CSRF) vulnerability affecting its Wireless LAN Controller software. This issue arises from insufficient XSRF protections in the web-based management interface, allowing an unauthenticated, remote attacker to persuade a user to click a specially crafted URL, resulting in the execution of arbitrary actions with the privileges of the affected user. The CVSS3 score for this vulnerability is 6.8, classified as "High Severity" with a CVSS3 vector of "CVSS2#AV:N/AC:M/Au:N/C:P/I:P/A:P". To mitigate this risk, it is recommended to upgrade to the fixed version referenced in Cisco bug ID CSCvj06910. Affected devices with IP addresses 10.16.2.31 (tcp/5246), 10.16.2.30 (tcp/5246), 192.168.2.31 (tcp/5246), 192.168.2.30 (tcp/5246), 77.44.11.31 (tcp/5246), 77.44.11.30 (tcp/5246), and 22.34.18.31 (tcp/5246), 22.34.18.30 (tcp/5246) should be prioritized for updating. This vulnerability carries a Medium risk factor. For further details, please refer to the included Cisco Bug ID CSCvj06910 and the Cisco Security Advisory.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Cisco ha rilasciato un avviso di sicurezza (cisco-sa-20190417-wlc-csrf) per una vulnerabilità di Cross-Site Request Forgery (CSRF) che colpisce il suo software Wireless LAN Controller. Questo problema deriva da insufficienti protezioni XSRF nell'interfaccia di gestione basata sul Web, consentendo a un utente malintenzionato remoto non autenticato di persuadere un utente a fare clic su un URL appositamente predisposto, con conseguente esecuzione di azioni arbitrarie con i privilegi dell'utente interessato. Il punteggio CVSS3 per questa vulnerabilità è 6.8, classificato come "Alta gravità" con un vettore CVSS3 di "CVSS2AV:N/AC:M/Au:N/C:P/I:P/A:P". Per mitigare questo rischio, si consiglia di eseguire l'aggiornamento alla versione fissa a cui fa riferimento il bug Cisco ID CSCvj06910. I dispositivi interessati con indirizzi IP 10.6.2.31 (tcp/5246), 10.6.2.30 (tcp/5246), 192.168.2.31 (tcp/5246), 192.168.2.30 (tcp/5246), 77.44.11.31 (tcp/5246), 77.44.11.30 (tcp/5246), e 22.34.18.31 (tcp/5246) dovrebbero essere aggiornati per 22.34.18.18.31 (t. Questa vulnerabilità comporta un fattore di rischio medio. Per ulteriori dettagli, fare riferimento al Cisco Bug ID CSCvj06910 incluso e al Cisco Security Advisory.
+ Lista mancanti:
+ Host: 10.16.2.31 Port:tcp/5246
+  Host: 10.16.2.30 Port:tcp/5246
+  Host: 22.34.18.30 Port:tcp/5246
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Cisco Wireless LAN Controller Software GUI Configuration Denial of Service Vulnerabilities
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The vulnerability "Cisco Wireless LAN Controller Software GUI Configuration Denial of Service Vulnerabilities" (CVE-2018-0248) with a CVSS3 score of 6.8 (High severity) poses a Medium risk factor due to the potential for a denial of service (DoS) condition when an authenticated attacker submits crafted user input to the administrative GUI configuration feature. This vulnerability exists in Cisco Wireless LAN Controller (WLC) Software and is exacerbated when the Cisco Security Advisory for cross-site request forgery (CVE-2019-0248) has not been addressed. If left unresolved, an unauthenticated attacker can exploit this vulnerability to execute arbitrary commands with administrator privileges. The CVSS3 vector is AV:N/AC:L/Au:S/C:N/I:N/A:C. To mitigate this issue, it is recommended to upgrade to the fixed version referenced in Cisco bug ID CSCvf1632. IP addresses with affected services include 10.16.2.31, 10.16.2.30, 192.168.2.31, 192.168.2.30, 77.44.11.31, and 77.44.11.30 on TCP port 5246, as well as 22.34.18.31 and 22.34.18.30 on TCP port 5246.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+La vulnerabilità "Disattivazione delle vulnerabilità del software di configurazione GUI del controller LAN wireless di Cisco" (CVE-2018-0248) con un punteggio CVSS3 di 6.8 (Alta gravità) pone un fattore di rischio medio a causa della potenziale condizione di un denial of service (DoS) quando un utente malintenzionato autenticato invia l'input dell'utente alla funzione di configurazione GUI amministrativa. Questa vulnerabilità esiste nel software Cisco Wireless LAN Controller (WLC) e viene esacerbata quando l'advisory di sicurezza Cisco per la falsificazione di richieste cross-site (CVE-2019-0248) non è stato risolto. Se non viene risolto, un utente malintenzionato non autenticato può sfruttare questa vulnerabilità per eseguire comandi arbitrari con privilegi di amministratore. Il vettore CVSS3 è AV:N/AC:L/Au:S/C:N/I:N/A:C. Per attenuare questo problema, si consiglia di eseguire l'aggiornamento alla versione fissa a cui fa riferimento il bug di Cisco ID CSCvf1632. Gli indirizzi IP con servizi interessati includono 10.16.2.31, 10.16.2.30, 192.168.2.31, 192.168.2.30, 77.44.11.31 e 77.44.11.30 sulla porta TCP 5246, nonché 22.34.18.31 e 22.34.18.30 sulla porta TCP 5246.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Cisco Wireless LAN Controller Software IAPP Message Handling Denial of Service Vulnerabilities
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The vulnerability "Cisco Wireless LAN Controller Software IAPP Message Handling Denial of Service Vulnerabilities" affects Cisco Wireless LAN Controller (WLC) Software due to improper input validation of Inter-Access Point Protocol (IAPP) messages, potentially causing a denial of service (DoS) condition for unauthenticated, adjacent attackers. CVE-2019-1799, CVE-2019-1796, and CVE-2019-1800 have been identified as the underlying vulnerabilities. An attacker can exploit these vulnerabilities by sending malicious IAPP messages to the affected device. The severity level is rated as 2, and the CVSS3 score is 6.1. The CVSS3 vector is CVSS2#AV:A/AC:L/Au:N/C:N/I:N/A:C. The risk factor is classified as Medium. Cisco has released fixed versions through bug IDs CSCvh91032, CSCvh9636, and CSCvi89027 to address these issues. Immediate action is recommended to prevent potential DoS attacks on the following IP addresses and ports: ['10.16.2.31', 'tcp/5246'], ['10.16.2.30', 'tcp/5246'], ['192.168.2.31', 'tcp/5246'], ['192.168.2.30', 'tcp/5246'], ['77.44.11.31', 'tcp/5246'], and ['22.34.18.31', 'tcp/5246'], ['22.34.18.30', 'tcp/5246'].
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+La vulnerabilità "Software per la gestione dei messaggi IAPP" influisce sul software Cisco Wireless LAN Controller (WLC) a causa della convalida in ingresso impropria dei messaggi IAPP (Inter-Access Point Protocol), causando potenzialmente una condizione DoS (Denial of Service) per gli aggressori adiacenti non autenticati. CVE-2019-1799, CVE-2019-1796 e CVE-2019-1800 sono stati identificati come le vulnerabilità sottostanti. Un utente malintenzionato può sfruttare queste vulnerabilità inviando messaggi IAPP dannosi al dispositivo interessato. Il livello di gravità è valutato come 2, e il punteggio CVSS3 è 6.1. Il vettore CVSS3 è CVSS2AV:A/AC:L/Au:N/C:N/I:N/A:C. Il fattore di rischio è classificato come medio. Cisco ha rilasciato versioni fisse tramite bug ID CSCvh91032, CSCvh9636 e CSCvi89027 per risolvere questi problemi. Si raccomanda un'azione immediata per prevenire potenziali attacchi DoS ai seguenti indirizzi IP e porte: ['22.16.2.31', 'tcp/5246'], ['10.16.2.30', 'tcp/5246', ['192.168,2.31', 'tcp/5246''], ['192.168.2.30', 'tcp/52'46']
+ Lista mancanti:
+ Host: 10.16.2.31 Port:tcp/5246
+  Host: 192.168.2.31 Port:tcp/5246
+  Host: 77.44.11.31 Port:tcp/5246
+  Host: 77.44.11.30 Port:tcp/5246
+  Host: 22.34.18.31 Port:tcp/5246
+  Host: 22.34.18.30 Port:tcp/5246
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Cisco Wireless LAN Controller Locally Significant Certificate Denial of Service Vulnerability
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: Cisco has identified a locally significant certificate denial of service vulnerability (CVE-2019-1830) in their Wireless LAN Controllers (WLC) with a severity rating of 2 (moderate) and a CVSS3 score of 6.8. This issue is caused by insufficient input validation in the HTTP URL used to establish a connection to the LSC certificate, which allows an authenticated attacker with administrator credentials to trigger a device restart, resulting in a denial of service (DoS) condition. To exploit this vulnerability, the attacker needs to configure a LSC certificate on the affected device. Cisco recommends upgrading to the fixed version referenced in bug ID CSCvj07995 to mitigate this issue. The risk factor is classified as medium. The following IP addresses and ports should be checked for potential impact: 10.16.2.31 (tcp/5246), 10.16.2.30 (tcp/5246), 192.168.2.31 (tcp/5246), 192.168.2.30 (tcp/5246), 77.44.11.31 (tcp/5246), 77.44.11.30 (tcp/5246), and 22.34.18.31 (tcp/5246), 22.34.18.30 (tcp/5246). More information can be found in the Cisco Security Advisory.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Cisco ha identificato una vulnerabilità di tipo denial of service (CVE-2019-1830) significativa a livello locale nei propri controller LAN wireless (WLC) con un punteggio di gravità di 2 (moderato) e un punteggio CVSS3 di 6.8. Questo problema è causato da insufficiente convalida di input nell'URL HTTP utilizzato per stabilire una connessione al certificato LSC, che consente a un utente malintenzionato autenticato con credenziali di amministratore di avviare un riavvio del dispositivo, con conseguente condizione di denial of service (DoS). Per sfruttare questa vulnerabilità, l'attaccante deve configurare un certificato LSC sul dispositivo interessato. Cisco consiglia di eseguire l'aggiornamento alla versione fissa a cui fa riferimento il bug ID CSCvj07995 per attenuare questo problema. Il fattore di rischio è classificato come medio. Gli indirizzi IP e le porte seguenti devono essere controllati per verificare l'impatto potenziale: 10.16.2.31 (tcp/5246), 10.16.2.30 (tcp/5246), 192.168.2.31 (tcp/5246), 192.168.2.30 (tcp/5246), 77.44.11.31 (tcp/5246), 77.44.11.30 (tcp/5246) e 22.344.30 (tp/5246). Ulteriori informazioni sono disponibili nel Cisco Security Advisory.
+ Lista mancanti:
+ Host: 22.34.18.31 Port:tcp/5246
+  Host: 22.34.18.30 Port:tcp/5246
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Cisco Wireless LAN Controller Secure Shell (SSH) Denial of Service Vulnerability (cisco-sa-20191016-wlc-ssh-dos)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The identified vulnerability is the "Cisco Wireless LAN Controller Secure Shell (SSH) Denial of Service Vulnerability (cisco-sa-20191016-wlc-ssh-dos" with a CVSS3 score of 7.8 and a high risk factor. This issue is caused by insufficient process cleanup in the SSH component, allowing an authenticated, remote attacker to initiate repeated connections and exhaust system resources, causing the system to become unresponsive. Cisco has released a fix for this vulnerability in the latest software versions, which can be found in bug ID CSCvp34148. To mitigate this security concern, it is recommended to upgrade to the fixed software version. This vulnerability affects Cisco Wireless LAN Controllers and can be exploited by authenticated, remote attackers. The CVSS3 vector is AV:N/AC:L/Au:N/C:N/I:N. The affected IP addresses and TCP ports include 10.16.2.31 (tcp/5246), 10.16.2.30 (tcp/5246), 192.168.2.31 (tcp/5246), 192.168.2.30 (tcp/5246), 77.44.11.31 (tcp/5246), 77.44.11.30 (tcp/5246), and 22.34.18.31 (tcp/5246), 22.34.18.30 (tcp/5246). It is crucial to apply the necessary patches to all impacted devices as soon as possible to prevent potential denial of service attacks. For further details, refer to the Cisco Security Advisory.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+La vulnerabilità identificata è la "Cisco Wireless LAN Controller Secure Shell (SSH) Denial of Service Vulnerability (cisco-sa-20191016-wlc-ssh-dos)" con un punteggio CVSS3 di 7,8 e un fattore di rischio elevato. Questo problema è causato da una pulizia insufficiente del processo nel componente SSH, che consente a un utente malintenzionato remoto autenticato di avviare connessioni ripetute e risorse del sistema di scarico, causando la mancata risposta del sistema. Cisco ha rilasciato una correzione per questa vulnerabilità nelle ultime versioni del software, che può essere trovata nel bug ID CSCvp34148. Per mitigare questo problema di sicurezza, si consiglia di aggiornare alla versione software fissa. Questa vulnerabilità influisce sui controller LAN wireless Cisco e può essere sfruttata da aggressori remoti autenticati. Il vettore CVSS3 è AV:N/AC:L/Au:N/C:N/I:N. Gli indirizzi IP interessati e le porte TCP includono 10.16.2.31 (tcp/5246), 10.16.2.30 (tcp/5246), 192.168.2.31 (tcp/5246), 192.168.2.30 (tcp/5246), 77.44.11.31 (tcp/5246), 77.44.11.30 (tcp/5246), e 22.34.18 (t.31). È fondamentale applicare le patch necessarie a tutti i dispositivi interessati il prima possibile per prevenire potenziali attacchi di tipo denial of service. Per ulteriori dettagli, fare riferimento al Cisco Security Advisory.
+ Lista mancanti:
+ Host: 22.34.18.31 Port:tcp/5246
+  Host: 22.34.18.30 Port:tcp/5246
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Cisco AireOS Software for Cisco Wireless LAN Controllers (WLC) DoS (cisco-sa-iosxe-wlc-fnfv9-EvrAQpNX)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The vulnerability "Cisco AireOS Software for Cisco Wireless LAN Controllers (WLC) DoS (cisco-sa-iosxe-wlc-fnfv9-EvrAQpNX)" has a CVSS3 score of 7.8 and a CVSS3 vector of CVSS2#AV:N/AC:L/Au:N/C:N/I:N/A:C, indicating a high risk factor. This remote DoS vulnerability affects the Flexible NetFlow Version 9 packet processor on Cisco Wireless LAN Controllers due to insufficient validation of certain parameters in a Flexible NetFlow Version 9 record. An unauthenticated attacker can trigger this vulnerability and cause a denial of service condition on the affected device. The severity level is rated as 3. To mitigate this issue, it is recommended to upgrade to the fixed version referenced in Cisco bug ID CSCvr53845. The following IP addresses and ports should be copied for reference: ['10.16.2.31', 'tcp/5246'], ['10.16.2.30', 'tcp/5246'], ['192.168.2.31', 'tcp/5246'], ['192.168.2.30', 'tcp/5246'], ['77.44.11.31', 'tcp/5246'], ['77.44.11.30', 'tcp/5246'], and ['22.34.18.31', 'tcp/5246'], ['22.34.18.30', 'tcp/5246']. More information can be found in the corresponding Cisco Security Advisory.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+La vulnerabilità "Cisco AireOS Software for Cisco Wireless LAN Controllers (WLC) DoS (cisco-sa-iosxe-wlc-fnfv9-EvrAQpNX)" ha un punteggio CVSS3 di 7,8 e un vettore CVSS3 di CVSS2AV:N/AC:L/Au:N/C:N/I:N/A:C, indicando un fattore di rischio elevato. Questa vulnerabilità DoS remota influisce sul processore di pacchetti Flexible NetFlow Versione 9 sui controller LAN wireless Cisco a causa di una convalida insufficiente di determinati parametri in un record Flexible NetFlow Versione 9. Un utente malintenzionato non autenticato può attivare questa vulnerabilità e causare una condizione di denial of service sul dispositivo interessato. Il livello di gravità è valutato come 3. Per attenuare questo problema, si consiglia di eseguire l'aggiornamento alla versione fissa a cui fa riferimento il bug Cisco ID CSCvr53845. I seguenti indirizzi IP e porte devono essere copiati per riferimento: ['10.16.2.31', 'tcp/5246'], ['34.16.2.30', 'tcp/5246'], ['192.168.2.31', 'tcp/5246', ['192.168.2.30', 'tcp/5246'], ['''77.44t. Ulteriori informazioni sono disponibili nel Cisco Security Advisory corrispondente.
+ Lista mancanti:
+ Host: 10.16.2.30 Port:tcp/5246
+  Host: 77.44.11.31 Port:tcp/5246
+  Host: 77.44.11.30 Port:tcp/5246
+  Host: 22.34.18.31 Port:tcp/5246
+  Host: 22.34.18.30 Port:tcp/5246
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Cisco Wireless LAN Controller CAPWAP DoS (cisco-sa-wlc-capwap-dos-Y2sD9uEw)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The identified vulnerability, Cisco Wireless LAN Controller CAPWAP DoS (cisco-sa-wlc-capwap-dos-Y2sD9uEw), affects the CAPWAP protocol handler on Cisco Wireless LAN Controllers due to insufficient validation of packets. An unauthenticated, remote attacker can trigger a denial of service (DoS) by sending malformed CAPWAP packets to an affected device. Cisco has released a fix for this issue, which can be found in their bug ID CSCvq59667. The CVSS3 score for this vulnerability is 5.0 and the vector is CVSS2#AV:N/AC:L/Au:N/C:N/I:N/A:P, indicating a medium risk level. As a mitigation measure, it is highly recommended to upgrade to the recommended fixed version. The following IP addresses and ports should be monitored for potential exploitation: ['10.16.2.31', 'tcp/5246'], ['10.16.2.30', 'tcp/5246'], ['192.168.2.31', 'tcp/5246'], ['192.168.2.30', 'tcp/5246'], ['77.44.11.31', 'tcp/5246'], ['77.44.11.30', 'tcp/5246'], and ['22.34.18.31', 'tcp/5246'], ['22.34.18.30', 'tcp/5246']. For further details, please refer to the Cisco Security Advisory.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+La vulnerabilità identificata, Cisco Wireless LAN Controller CAPWAP DoS (cisco-sa-wlc-capwap-dos-Y2sD9uEw), influisce sul gestore del protocollo CAPWAP sui controller LAN wireless Cisco a causa di una convalida insufficiente dei pacchetti. Un utente malintenzionato remoto non autenticato può attivare un Denial of Service (DoS) inviando pacchetti CAPWAP malformati a un dispositivo interessato. Cisco ha rilasciato una correzione per questo problema, che può essere trovato nel loro bug ID CSCvq59667. Il punteggio CVSS3 per questa vulnerabilità è 5.0 e il vettore è CVSS2AV:N/AC:L/Au:N/C:N/I:N/A:P, indicando un livello di rischio medio. Come misura di mitigazione, si consiglia vivamente di aggiornare alla versione fissa raccomandata. Per il potenziale sfruttamento è necessario monitorare i seguenti indirizzi IP e porti: ['10.16.2.31', 'tcp/5246'], ['34.16.2.30', 'tcp/5246'], ['192.168.2.31', 'tcp/5246'], ['192.168.2.30', 'tcp/52.46'], [''77.52. Per ulteriori dettagli, fare riferimento al Cisco Security Advisory.
+ Lista mancanti:
+ Host: 10.16.2.30 Port:tcp/5246
+  Host: 77.44.11.31 Port:tcp/5246
+  Host: 77.44.11.30 Port:tcp/5246
+  Host: 22.34.18.31 Port:tcp/5246
+  Host: 22.34.18.30 Port:tcp/5246
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Unencrypted Telnet Server
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The vulnerability identified is the existence of unencrypted Telnet servers on multiple hosts, which presents a medium risk due to the potential for man-in-the-middle attacks and the exposure of sensitive information. This issue has a CVSS3 score of 5.8 and falls under the category of access vectors (AV), attack complexities (AC) of network (N), authentication (Au) of none (N), confidentiality (C) of partial (P), integrity (I) of partial (P), and availability (A) of none (N). To mitigate this vulnerability, we recommend disabling the Telnet service and using SSH instead, as SSH provides encryption for credentials and data transfer. The following IP addresses and ports are affected: 10.16.2.31, 10.16.2.19, 10.16.2.18, 10.16.2.17, 10.16.2.14, 10.16.2.13, 10.16.2.12, 192.168.2.31, 192.168.2.19, 192.168.2.18, 192.168.2.17, 192.168.2.14, 192.168.2.13, 192.168.2.12, 77.44.11.31, 77.44.11.19, 77.44.11.18, 77.44.11.17, 77.44.11.14, and 77.44.11.13, as well as 22.34.18.31, 22.34.18.19, 22.34.18.18, 22.34.18.17, and 22.34.18.14, 22.34.18.13, 22.34.18.12.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+La vulnerabilità identificata è l'esistenza di server Telnet non crittografati su più host, che presenta un rischio medio a causa del potenziale di attacchi man-in-the-middle e dell'esposizione di informazioni sensibili. Questo problema ha un punteggio CVSS3 di 5.8 e rientra nella categoria dei vettori di accesso (AV), complessità di attacco (AC) di rete (N), autenticazione (Au) di nessuno (N), riservatezza (C) di parziale (P), integrità (I) di parziale (P) e disponibilità (A) di nessuno (N). Per mitigare questa vulnerabilità, si consiglia di disabilitare il servizio Telnet e utilizzare invece SSH, poiché SSH fornisce la crittografia per le credenziali e il trasferimento dei dati. Sono interessati i seguenti indirizzi IP e porte: 10.16.2.31, 10.16.2.19, 10.16.2.18, 10.16.2.14, 10.16.2.113, 10.16.2.1.12, 192.168.2.31, 192.168.2.19, 192.168.2.18, 192.168.2.17, 222.168.2.14, 192.168.2.13, 192.116.2.13, 192.116.2.11, 192.114, 192.116.2.118
+ Lista mancanti:
+ Host: 10.16.2.17 Port:tcp/23
+  Host: 10.16.2.13 Port:tcp/23
+  Host: 10.16.2.12 Port:tcp/23
+  Host: 192.168.2.14 Port:tcp/23
+  Host: 192.168.2.12 Port:tcp/23
+  Host: 77.44.11.31 Port:tcp/23
+  Host: 77.44.11.19 Port:tcp/23
+  Host: 77.44.11.18 Port:tcp/23
+  Host: 77.44.11.17 Port:tcp/23
+  Host: 77.44.11.14 Port:tcp/23
+  Host: 77.44.11.13 Port:tcp/23
+  Host: 77.44.11.12 Port:tcp/23
+  Host: 22.34.18.31 Port:tcp/23
+  Host: 22.34.18.19 Port:tcp/23
+  Host: 22.34.18.18 Port:tcp/23
+  Host: 22.34.18.17 Port:tcp/23
+  Host: 22.34.18.14 Port:tcp/23
+  Host: 22.34.18.13 Port:tcp/23
+  Host: 22.34.18.12 Port:tcp/23
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TLS Version 1.1 Protocol Deprecated
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: The identified vulnerability is the usage of the outdated TLS Version 1.1 protocol for encryption, which lacks support for modern cipher suites and authenticated encryption modes, posing a security risk. This issue has a CVSS3 score of 6.1 and falls under the Medium risk category due to the potential for confidential data exposure. Major web browsers and vendors are discontinuing support for TLS 1.1 as of March 31, 2020, leading to compatibility issues. The solution to mitigate this vulnerability is to enable TLS 1.2 or 1.3 and disable TLS 1.1 support.
+
+Affected endpoints include:
+- 10.16.2.22 (TCP port 443)
+- 10.16.2.21 (TCP port 443)
+- 10.16.2.11 (TCP port 443)
+- 192.168.2.22 (TCP port 443)
+- 192.168.2.21 (TCP port 443)
+- 192.168.2.11 (TCP port 443)
+- 77.44.11.22 (TCP port 443)
+- 77.44.11.21 (TCP port 443)
+- 77.44.11.11 (TCP port 443)
+- 22.34.18.22 (TCP port 443)
+- 22.34.18.21 (TCP port 443)
+- 22.34.18.11 (TCP port 443)
+
+The CVSS3 vector for this vulnerability is CVSS2#AV:N/AC:H/Au:N/C:C/I:P/A:N, indicating a network-based attack vector, high access complexity, no authentication required, confidentiality impacts, and no integrity or availability impacts. This vulnerability requires no user interaction, and no privileged access is needed to exploit it. 
+
+In layman's terms, the use of TLS Version 1.1 as a security protocol may leave sensitive data vulnerable to interception or theft as it does not support current encryption methods. To avoid compatibility issues with major web browsers and vendors, it is necessary to implement TLS 1.2 or 1.3 and discontinue using TLS 1.1.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+La vulnerabilità identificata è l'uso del protocollo TLS versione 1.1 obsoleto per la crittografia, che manca del supporto per le moderne suite di cifratura e le modalità di crittografia autenticate, che rappresentano un rischio per la sicurezza. Questo problema ha un punteggio CVSS3 di 6.1 e rientra nella categoria di rischio medio a causa del potenziale di esposizione dei dati riservati. I principali browser web e fornitori stanno interrompendo il supporto per TLS 1.1 al 31 marzo 2020, portando a problemi di compatibilità. La soluzione per mitigare questa vulnerabilità è abilitare TLS 1.2 o 1.3 e disabilitare il supporto TLS 1.1.
+
+Gli endpoint interessati includono:
+- 10.16.2.22 (TCP port 443)
+- 10.16.2.21 (TCP port 443)
+- 10.16.2.11 (TCP port 443)
+- 192.168.2.22 (TCP port 443)
+- 192.168.2.21 (TCP port 443)
+- 192.168.2.11 (TCP port 443)
+- 77.44.11.22 (TCP port 443)
+- 77.44.11.21 (TCP port 443)
+- 77.44.11.11 (TCP port 443)
+- 22.34.18.22 (TCP port 443)
+- 22.34.18.21 (TCP port 443)
+- 22.34.18.11 (TCP port 443)
+
+Il vettore CVSS3 per questa vulnerabilità è CVSS2AV:N/AC:H/Au:N/C:C/I:P/A:N, che indica un vettore di attacco basato sulla rete, un'elevata complessità di accesso, nessuna autenticazione richiesta, impatti sulla riservatezza e nessun impatto sull'integrità o sulla disponibilità. Questa vulnerabilità non richiede alcuna interazione da parte dell'utente e non è necessario alcun accesso privilegiato per sfruttarla. 
+
+In termini laici, l'uso di TLS versione 1.1 come protocollo di sicurezza può lasciare i dati sensibili vulnerabili all'intercettazione o al furto in quanto non supporta i metodi di crittografia attuali. Per evitare problemi di compatibilità con i principali browser Web e fornitori, è necessario implementare TLS 1.2 o 1.3 e interrompere l'utilizzo di TLS 1.1.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SSL Certificate Chain Contains Weak RSA Keys
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: A vulnerability has been identified related to SSL Certificate Chain Contains Weak RSA Keys in multiple servers. At least one of the X.509 certificates sent by the remote hosts has a key with less than 1024 bits, making it prone to factorization attacks due to advancements in computing power. Some SSL implementations, such as Microsoft's, may deem the SSL chain invalid because of the weak RSA keys. The CVSS3 score for this issue is 4.0, with a severity level of 2 (moderate) and a risk factor of Medium. To mitigate the risk, it is recommended to replace the affected certificates with stronger keys and reissue any signed certificates. Affected servers with IP addresses 10.16.2.22 (TCP/443), 10.16.2.21 (TCP/443), 10.16.2.11 (TCP/443), 192.168.2.22 (TCP/443), 192.168.2.21 (TCP/443), 77.44.11.22 (TCP/443), 77.44.11.21 (TCP/443), 77.44.11.11 (TCP/443), 22.34.18.22 (TCP/443), 22.34.18.21 (TCP/443), and 22.34.18.11 (TCP/443) should be addressed by updating the SSL certificates.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Riepilogo: Una vulnerabilità è stata identificata in relazione a SSL Certificate Chain Contiene chiavi RSA deboli in più server. Almeno uno dei certificati X.509 inviati dagli host remoti ha una chiave con meno di 1024 bit, rendendolo soggetto ad attacchi di fattorizzazione a causa dei progressi nella potenza di calcolo. Alcune implementazioni SSL, come Microsoft, potrebbero ritenere la catena SSL non valida a causa delle chiavi RSA deboli. Il punteggio CVSS3 per questo problema è 4.0, con un livello di gravità di 2 (moderato) e un fattore di rischio di Medium. Per mitigare il rischio, si consiglia di sostituire i certificati interessati con chiavi più forti e di ripubblicare eventuali certificati firmati. Server interessati con indirizzi IP 10.16.2.22 (TCP/443), 10.16.2.21 (TCP/443), 10.16.2.11 (TCP/443), 192.168.2.22 (TCP/443), 192.168.2.21 (TCP/443), 77.44.11.22 (TCP/443), 77.44.11.21 (TCP/443), 77.44.11 (TCP/443), 77.44.11.
+ Lista mancanti:
+ Host: 192.168.2.11 Port:tcp/443
+  Host: 77.44.11.11 Port:tcp/443
+  Host: 22.34.18.22 Port:tcp/443
+  Host: 22.34.18.21 Port:tcp/443
+  Host: 22.34.18.11 Port:tcp/443
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Network Time Protocol (NTP) Mode 6 Scanner
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: Our network is vulnerable to a Network Time Protocol (NTP) Mode 6 scanner, which allows unauthenticated remote attackers to cause a reflected denial of service condition through specially crafted queries. This issue has a CVSS3 score of 5.0 and a Medium risk factor. Restricting NTP mode 6 queries is the recommended solution to mitigate this vulnerability. Impact is non-existent for confidentiality (C), integrity (I), and availability (A), but has a high access vector (AV) and network (AC) complexity. The following IP addresses with open NTP ports (123/UDP) need to be reviewed and secured: 10.16.2.22, 10.16.2.21, 10.16.2.11, 10.16.2.2, 10.16.2.1, 192.168.2.22, 192.168.2.21, 192.168.2.11, 192.168.2.2, 192.168.2.1, 77.44.11.22, 77.44.11.21, 77.44.11.11, 77.44.11.2, and 77.44.11.1, as well as 22.34.18.22, 22.34.18.21, 22.34.18.11, and 22.34.18.2.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Riepilogo: La nostra rete è vulnerabile a uno scanner Network Time Protocol (NTP) Mode 6, che consente agli aggressori remoti non autenticati di causare una condizione di negazione del servizio riflessa attraverso query appositamente predisposte. Questo problema ha un punteggio CVSS3 di 5.0 e un fattore di rischio medio. Limitare le query in modalità NTP 6 è la soluzione consigliata per mitigare questa vulnerabilità. L'impatto è inesistente per la riservatezza (C), l'integrità (I) e la disponibilità (A), ma ha una complessità vettoriale ad alto accesso (AV) e di rete (AC). I seguenti indirizzi IP con porte NTP aperte (123/UDP) devono essere revisionati e protetti: 22.16.2.22, 10.16.2.21, 10.16.2.1, 10.16.2.1, 192.168.2.22, 192.168.2.11, 192.118.2.1, 192.168.2.1, 192.168.2.1, 77.44.11.22, 77.44.21, 77.11.2.11, 192.18.1, 192.1188.188.2, 192.18.168.2.2.1
+ Lista mancanti:
+ Host: 10.16.2.22 Port:udp/123
+  Host: 10.16.2.11 Port:udp/123
+  Host: 10.16.2.2 Port:udp/123
+  Host: 192.168.2.21 Port:udp/123
+  Host: 192.168.2.2 Port:udp/123
+  Host: 77.44.11.21 Port:udp/123
+  Host: 77.44.11.11 Port:udp/123
+  Host: 77.44.11.2 Port:udp/123
+  Host: 77.44.11.1 Port:udp/123
+  Host: 22.34.18.22 Port:udp/123
+  Host: 22.34.18.21 Port:udp/123
+  Host: 22.34.18.11 Port:udp/123
+  Host: 22.34.18.2 Port:udp/123
+  Host: 22.34.18.1 Port:udp/123
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SNMP Agent Default Community Name (public)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: The identified vulnerability is the use of the default community name "public" in SNMP agents, which allows an attacker to easily retrieve sensitive information about the remote system or modify its configuration. With a CVSS3 score of 7.5 and a high risk factor, this issue falls under the severity level of 3. To mitigate this risk, it is recommended to either disable SNMP or filter incoming UDP traffic on port 161 for the following IP addresses: 10.16.2.20, 10.16.2.19, 10.16.2.18, 10.16.2.17, 10.16.2.14, 10.16.13, 10.16.2.12, 192.168.2.20, 192.168.2.19, 192.168.2.18, 192.168.2.17, 192.168.2.14, 192.168.2.13, 192.168.2.12, 77.44.11.20, 77.44.11.19, 77.44.11.18, 77.44.11.17, 77.44.11.14, and 77.44.11.13, as well as 22.34.18.20, 22.34.18.19, 22.34.18.18, 22.34.18.17, and 22.34.18.14, 22.34.18.13, 22.34.18.12. Attackers can exploit this weakness to gather information about the remote host or alter its configuration if the default community string is still in use. To prevent unauthorized access, it is advised to disable SNMP or modify the community name.
+
+Description: The SNMP (Simple Network Management Protocol) is a network protocol used for monitoring and managing network devices. The default community name "public" is commonly used for SNMP agents, making it easy for attackers to retrieve sensitive information or make configuration changes on the remote system. This can be exploited to gain further knowledge about the device or manipulate its settings. It is crucial to disable SNMP or modify the community name to a unique and strong value to prevent unauthorized access. Alternatively, UDP traffic on port 161 can be filtered to prevent attacks.
+
+CVSS3 Vector: CVSS2#AV:N/AC:L/Au:N/C:P/I:P/A:P
+Risk Factor: High
+Severity: 3 (Moderate)
+CVSS3 Score: 7.5 (High Severity)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+La vulnerabilità identificata è l'uso del nome della comunità predefinito "pubblico" negli agenti SNMP, che consente a un utente malintenzionato di recuperare facilmente informazioni sensibili sul sistema remoto o modificare la sua configurazione. Con un punteggio CVSS3 di 7,5 e un fattore di rischio elevato, questo problema cade sotto il livello di gravità di 3. Per mitigare questo rischio, si consiglia di disabilitare SNMP o filtrare il traffico UDP in entrata sulla porta 161 per i seguenti indirizzi IP: 22.134.2.20, 10.16.2.118, 10.116.2.1117, 10.12.2.1.14, 10.16.13, 10.16.2.12, 192.168.2.20, 192.168.2.19, 192.168.2.18. Gli attaccanti possono sfruttare questa debolezza per raccogliere informazioni sull'host remoto o modificare la sua configurazione se la stringa della community predefinita è ancora in uso. Per impedire l'accesso non autorizzato, si consiglia di disabilitare SNMP o modificare il nome della comunità.
+
+Descrizione: SNMP (Simple Network Management Protocol) è un protocollo di rete utilizzato per il monitoraggio e la gestione dei dispositivi di rete. Il nome della community predefinito "pubblico" è comunemente usato per gli agenti SNMP, rendendo facile per gli aggressori recuperare informazioni sensibili o apportare modifiche di configurazione sul sistema remoto. Questo può essere sfruttato per acquisire ulteriori conoscenze sul dispositivo o manipolare le sue impostazioni. È fondamentale disabilitare SNMP o modificare il nome della community in un valore unico e forte per impedire l'accesso non autorizzato. In alternativa, il traffico UDP sulla porta 161 può essere filtrato per evitare attacchi.
+
+Vettore di CVSS3: CVSS2AV:N/AC:L/Au:N/C:P/I:P/A:P
+Fattore di rischio: Alto
+Severità: 3 (moderato)
+Punteggio CVSS3: 7.5 (Alta Gravità)
+ Lista mancanti:
+ Host: 10.16.2.20 Port:udp/161
+  Host: 10.16.2.19 Port:udp/161
+  Host: 10.16.2.18 Port:udp/161
+  Host: 10.16.2.17 Port:udp/161
+  Host: 10.16.2.14 Port:udp/161
+  Host: 10.16.2.13 Port:udp/161
+  Host: 192.168.2.17 Port:udp/161
+  Host: 192.168.2.14 Port:udp/161
+  Host: 192.168.2.13 Port:udp/161
+  Host: 192.168.2.12 Port:udp/161
+  Host: 77.44.11.20 Port:udp/161
+  Host: 77.44.11.19 Port:udp/161
+  Host: 77.44.11.18 Port:udp/161
+  Host: 77.44.11.17 Port:udp/161
+  Host: 77.44.11.14 Port:udp/161
+  Host: 77.44.11.13 Port:udp/161
+  Host: 77.44.11.12 Port:udp/161
+  Host: 22.34.18.20 Port:udp/161
+  Host: 22.34.18.19 Port:udp/161
+  Host: 22.34.18.18 Port:udp/161
+  Host: 22.34.18.17 Port:udp/161
+  Host: 22.34.18.14 Port:udp/161
+  Host: 22.34.18.13 Port:udp/161
+  Host: 22.34.18.12 Port:udp/161
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OpenSSH With OpenPAM DoS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary:
+
+A remote denial of service vulnerability exists in OpenSSH when used in conjunction with OpenPAM due to insufficient handling of forked child processes during authentication. This issue is identified through the service's banner and allows a remote attacker to cause a denial of service by repeatedly connecting to the SSH server, waiting for the password prompt, and then disconnecting. The Common Vulnerability Scoring System (CVSS) version 3 score for this vulnerability is 5.0, with a severity rating of 2 (medium risk). The CVSS vector is CVSS2#AV:N/AC:L/Au:N/C:N/I:N/A:P. It is recommended to upgrade to OpenSSH 3.8.1p1 or later to address this vulnerability. The following IP addresses and ports require immediate attention: 10.16.2.18 (tcp/22), 192.168.2.18 (tcp/22), 77.44.11.18 (tcp/22), and 22.34.18 (tcp/22. 
+
+Description:
+
+The OpenSSH service on the remote host is susceptible to a denial of service attack when used with OpenPAM (Pluggable Authentication Modules) due to insufficient handling of forked child processes during authentication. This vulnerability allows a malicious actor to repeatedly connect to the SSH server, wait for the password prompt, and then disconnect, leading to a resource exhaustion attack that consumes system resources and potentially causes a denial of service. The severity of this issue is rated as medium (2) due to its remote exploitation and low impact on confidentiality, integrity, and availability. The Common Vulnerability Scoring System (CVSS) version 3 score is 5.0, indicating high severity (5-5.9). The attack vector is network (N), the attack complexity is low (L), authentication is not required (Au), the confidentiality and integrity impacts are not present (C:N), and availability is present (A:P). It is strongly advised to update to OpenSSH 3.8.1p1 or later to mitigate this vulnerability.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sommario:
+
+Una vulnerabilità di denial of service remota esiste in OpenSSH quando viene utilizzata in combinazione con OpenPAM a causa di una gestione insufficiente dei processi figlio forked durante l'autenticazione. Questo problema viene identificato tramite il banner del servizio e consente a un utente malintenzionato remoto di causare un denial of service collegandosi ripetutamente al server SSH, aspettando il prompt della password e quindi disconnettendosi. Il punteggio del Common Vulnerability Scoring System (CVSS) versione 3 per questa vulnerabilità è 5.0, con un punteggio di gravità di 2 (rischio medio). Il vettore CVSS è CVSS2AV:N/AC:L/Au:N/C:N/I:N/A:P. Si consiglia di eseguire l'aggiornamento a OpenSSH 3.8.1p1 o versioni successive per risolvere questa vulnerabilità. I seguenti indirizzi IP e porte richiedono un'attenzione immediata: 10.16.2.18 (tcp/22), 192.168.2.18 (tcp/22), 77.44.11.18 (tcp/22), e 22.34.18 (tcp/22). 
+
+Descrizione:
+
+Il servizio OpenSSH sull'host remoto è suscettibile di un attacco denial of service quando viene utilizzato con OpenPAM (Pluggable Authentication Module) a causa di una gestione insufficiente dei processi figlio forked durante l'autenticazione. Questa vulnerabilità consente a un attore malintenzionato di connettersi ripetutamente al server SSH, attendere il prompt della password e quindi disconnettersi, portando a un attacco di esaurimento delle risorse che consuma risorse di sistema e potenzialmente causa un denial of service. La gravità di questo problema è valutata come media (2) a causa del suo sfruttamento remoto e del basso impatto sulla riservatezza, l'integrità e la disponibilità. Il punteggio del Common Vulnerability Scoring System (CVSS) versione 3 è 5.0, indicando un'elevata gravità (5-5,9). Il vettore di attacco è la rete (N), la complessità di attacco è bassa (L), l'autenticazione non è richiesta (Au), gli impatti di riservatezza e integrità non sono presenti (C:N), e la disponibilità è presente (A:P). It is strongly advised to update to OpenSSH 3.8.1p1 or later to mitigate this vulnerability.
+ Lista mancanti:
+ Host: 22.34.18.18 Port:tcp/22
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Portable OpenSSH &lt; 3.8p1 Multiple Vulnerabilities
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: Multiple vulnerabilities have been identified in Portable OpenSSH versions prior to 3.8p1, which pose medium-risk factors. The first issue involves inadequate clearing of sensitive information such as credentials during PAM module handling, leading to potential leakage in memory and vulnerabilities in associated modules due to unpredictable behavior. The second vulnerability allows for denial of service attacks through resource exhaustion when privilege separation is enabled and session termination timeouts exceed the "LoginGraceTime" threshold. The Common Vulnerability Scoring System (CVSS) version 3 gives a base score of 5.0. The vector for these issues is CVSS2#AV:N/AC:L/Au:N/C:P/I:N. The recommended solution is to upgrade to OpenSSH 3.8p1 or later. The following IP addresses with SSH (TCP port 22) are affected: 10.16.2.18, 192.168.2.18, 77.44.11.18, and 22.34.18.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Riepilogo: sono state identificate più vulnerabilità nelle versioni Portable OpenSSH precedenti a 3.8p1, che pongono fattori di rischio medio. Il primo problema riguarda la cancellazione inadeguata di informazioni sensibili come le credenziali durante la gestione del modulo PAM, che porta a potenziali perdite di memoria e vulnerabilità nei moduli associati a causa di comportamenti imprevedibili. La seconda vulnerabilità consente attacchi denial of service attraverso l'esaurimento delle risorse quando la separazione dei privilegi è abilitata e i timeout di terminazione della sessione superano la soglia "LoginGraceTime". Il Common Vulnerability Scoring System (CVSS) versione 3 fornisce un punteggio base di 5.0. Il vettore per questi problemi è CVSS2AV:N/AC:L/Au:N/C:P/I:N. La soluzione consigliata è l'aggiornamento a OpenSSH 3.8p1 o versioni successive. Sono interessati i seguenti indirizzi IP con SSH (porta TCP 22): 10.16.2.18, 192.168.2.18, 77.44.11.18 e 22.34.18.
+ Lista mancanti:
+ Host: 22.34.18.18 Port:tcp/22
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OpenSSH  &lt; 4.3 scp Command Line Filename Processing Command Injection
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary:
+Our network has identified a critical security vulnerability in the OpenSSH service running on several servers. The issue, known as "OpenSSH < 4.3 scp Command Line Filename Processing Command Injection," allows a local attacker to execute arbitrary commands by manipulating filenames with shell metacharacters during scp transfers. This vulnerability is caused by the lack of proper input sanitization in the scp utility prior to using a system() function call. The CVSS3 score for this vulnerability is 4.6 (High Severity) and the vector is CVSS2#AV:L/AC:L/Au:N/C:P/I:P. The risk factor is Medium, indicating that exploitation is possible with local access. The recommended solution is to upgrade OpenSSH to version 4.3 or later to address this vulnerability. The following IP addresses and SSH ports have been identified as affected: 10.16.2.18 (tcp/22), 192.168.2.18 (tcp/22), 77.44.11.18 (tcp/22), and 22.34.18.18 (tcp/22. It is imperative to address this issue as soon as possible to mitigate potential unauthorized access or privilege escalation.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sommario:
+La nostra rete ha identificato una vulnerabilità di sicurezza critica nel servizio OpenSSH in esecuzione su più server. Il problema, noto come "OpenSSH  4.3 scp Command Line Filename Processing Command Injection", consente a un utente malintenzionato locale di eseguire comandi arbitrari manipolando i nomi dei file con metacaratteri shell durante i trasferimenti scp. Questa vulnerabilità è causata dalla mancanza di una corretta sanitizzazione dell'input nell'utilità scp prima di utilizzare una chiamata di funzione system(). Il punteggio CVSS3 per questa vulnerabilità è 4.6 (severità elevata) e il vettore è CVSS2AV:L/AC:L/Au:N/C:P/I:P. Il fattore di rischio è Medium, che indica che lo sfruttamento è possibile con l'accesso locale. La soluzione consigliata è l'aggiornamento di OpenSSH alla versione 4.3 o successiva per risolvere questa vulnerabilità. Sono stati identificati come interessati i seguenti indirizzi IP e le porte SSH: 10.16.2.18 (tcp/22), 192.168.2.18 (tcp/22), 77.44.11.18 (tcp/22) e 22.34.18.18 (tcp/22). È imperativo affrontare questo problema il più presto possibile per mitigare potenziali accessi non autorizzati o escalation dei privilegi.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OpenSSH &lt; 4.5 Multiple Vulnerabilities
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: Multiple vulnerabilities have been identified in OpenSSH versions prior to 4.5, including a client-side NULL pointer dereference through a protocol error from malicious servers, a privilege separation issue that enables bypassing authentication with other vulnerabilities present, and a denial of service attack during key creation for Mac OS X implementations. These vulnerabilities carry a CVSS3 score of 7.5 and a severity rating of 3, indicating a high risk factor. It is recommended to upgrade to OpenSSH 4.5 or later or apply appropriate security updates for Mac OS X versions 10.3 and 10.4 to mitigate these issues. The following IP addresses and ports should be prioritized for remediation: 10.16.2.18 (tcp/22), 192.168.2.18 (tcp/22), 77.44.11.18 (tcp/22), and 22.34.18 (tcp/22).
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Riepilogo: sono state identificate più vulnerabilità nelle versioni OpenSSH prima del 4.5, tra cui un dereference NULL puntatore lato client attraverso un errore di protocollo da server dannosi, un problema di separazione dei privilegi che consente di bypassare l'autenticazione con altre vulnerabilità presenti e un attacco denial of service durante la creazione di chiavi per le implementazioni di Mac OS X. Queste vulnerabilità hanno un punteggio CVSS3 di 7,5 e un punteggio di gravità di 3, indicando un fattore di rischio elevato. It is recommended to upgrade to OpenSSH 4.5 or later or apply appropriate security updates for Mac OS X versions 10.3 and 10.4 to mitigate these issues. I seguenti indirizzi IP e porte dovrebbero essere prioritari per la correzione: 10.16.2.18 (tcp/22), 192.168.2.18 (tcp/22), 77.44.11.18 (tcp/22), e 22.34.18 (tcp/22).
+ Lista mancanti:
+ Host: 22.34.18.18 Port:tcp/22
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OpenSSH &lt; 4.7 Trusted X11 Cookie Connection Policy Bypass
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: Our network has identified multiple instances of the OpenSSH Trusted X11 Cookie Connection Policy Bypass vulnerability, with affected versions being earlier than 4.7. This security issue allows attackers to bypass intended authentication policies and gain unauthorized privileges by exploiting the fact that older versions of OpenSSH may use a trusted cookie instead of an untrusted one if the temporary partition is full. The severity level is considered high with a CVSS3 score of 7.5 and vector CVSS2#AV:N/AC:L/Au:N/C:P/I:P. The recommended solution is to upgrade to OpenSSH version 4.7 or later to mitigate this vulnerability. Affected IP addresses and corresponding SSH ports include:
+
+- 10.16.2.18:22
+- 192.168.2.18:22
+- 77.44.11.18:22
+- 22.34.18.18:22
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Riepilogo: La nostra rete ha identificato più istanze della vulnerabilità OpenSSH Trusted X11 Cookie Connection Policy Bypass, con versioni interessate precedenti a 4.7. Questo problema di sicurezza consente agli aggressori di bypassare le politiche di autenticazione previste e ottenere privilegi non autorizzati sfruttando il fatto che le versioni precedenti di OpenSSH possono utilizzare un cookie attendibile invece di uno non attendibile se la partizione temporanea è piena. Il livello di gravità è considerato alto con un punteggio CVSS3 di 7,5 e un CVSS2AV:N/AC:L/Au:N/C:P/I:P. La soluzione consigliata è l'aggiornamento a OpenSSH versione 4.7 o successiva per mitigare questa vulnerabilità. Gli indirizzi IP interessati e le porte SSH corrispondenti includono:
+
+- 10.16.2.18:22
+- 192.168.2.18:22
+- 77.44.11.18:22
+- 22.34.18.18:22
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OpenSSH &lt; 4.9 &apos;ForceCommand&apos; Directive Bypass
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: The OpenSSH &lt; 4.9 'ForceCommand' Directive Bypass vulnerability allows authenticated users to bypass the 'ForceCommand' directive in the sshd_config file by modifying the.ssh/rc file on affected systems. This issue has a CVSS3 score of 6.5 (Medium severity) and falls under the vector CVSS2#AV:N/AC:L/Au:S/C:P/I:P. To mitigate this risk, it is recommended to upgrade to OpenSSH version 4.9 or later. The following IP addresses and ports have been identified with this vulnerability: [10.16.2.18 (tcp/22), 192.168.2.18 (tcp/22), 77.44.11.18 (tcp/22], and 22.34.18.18 (tcp/22).
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Riepilogo: La vulnerabilità di Bypass della direttiva OpenSSH &lt; 4.9 'ForceCommand' consente agli utenti autenticati di bypassare la direttiva 'ForceCommand' nel file sshd_config modificando il file.ssh/rc sui sistemi interessati. Questo problema ha un punteggio CVSS3 di 6.5 (Severità media) e rientra nel vettore CVSS2AV:N/AC:L/Au:S/C:P/I:P. Per mitigare questo rischio, si consiglia di eseguire l'aggiornamento a OpenSSH versione 4.9 o successiva. I seguenti indirizzi IP e porte sono stati identificati con questa vulnerabilità: [10.16.2.18 (tcp/22), 192.168.2.18 (tcp/22), 77.44.11.18 (tcp/22], e 22.34.18.18 (tcp/22).
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OpenSSH X11 Forwarding Session Hijacking
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary:
+
+A vulnerability known as "OpenSSH X11 Forwarding Session Hijacking" has been identified in the remote host's SSH implementation, with a version older than 5.0. This issue allows a local user with access to hijack X11 sessions due to improper binding of TCP ports on the local IPv6 interface when the corresponding ports on the IPv4 interface are already in use. The CVSS3 score for this vulnerability is 6.9 and the severity level is categorized as medium risk (2) with a risk factor. The CVSS3 vector is "CVSS2#AV:L/AC:M/Au:N/C:C/I:C/A:C". The solution to mitigate this issue is to upgrade to OpenSSH version 5.0 or later. The following IP addresses and ports should be noted for further examination: ['10.16.2.18', 'tcp/22'], ['192.168.2.18', 'tcp/22'], ['77.44.11.18', 'tcp/22'], and ['22.34.18.18', 'tcp/22'].
+
+Description:
+
+The OpenSSH X11 Forwarding Session Hijacking vulnerability allows local users with access to hijack X11 sessions due to improper binding of TCP ports on the local IPv6 interface when the corresponding ports on the IPv4 interface are already in use. This issue is present in SSH versions prior to 5.0. The vulnerability allows an attacker to potentially gain unauthorized access to active X11 sessions by exploiting the improper port binding mechanism. This can result in complete compromise of sensitive information, as well as system access and data disclosure.
+
+Solution:
+
+To mitigate this issue, it is recommended to upgrade the SSH implementation to version 5.0 or later. This will provide the necessary updates and patches to address this vulnerability and improve overall system security. The implementation of more restrictive network access control measures and user authentication policies can also be implemented to further mitigate the risk of exploitation. Regular security audits and monitoring should be conducted to ensure the effectiveness of these measures.
+
+CVSS3 Score: 6.9
+
+CVSS3 Vector: "CVSS2#AV:L/AC:M/Au:N/C:C/I:C/A:C"
+
+- AV: (A)vailability - No impact on system availability
+- AC: (A)ccess Vector - (L)ocal (i.e., the attacker must have local access)
+- AU: (N)o authentication required to exploit the vulnerability
+- C: (C) Confidentiality - (C)ompromise of sensitive information and data
+- I: (C) Integrity - (C)ompromise of system configuration and data integrity
+- A: (C) Confidentiality - (C) Compromise of confidentiality
+
+Risk Factor: Medium (2)
+
+The medium risk level is determined by the potential impact on confidentiality and integrity, as well as the ease of exploitation. While the attack vector is local, the severity is heightened due to the potential compromise of sensitive information and data. Proactive measures should be taken to address this vulnerability as soon as possible.
+
+Recommended Actions:
+
+- Regularly review and update SSH configurations to ensure that the latest version is being utilized
+- Implement user authentication policies, such as multi-factor authentication and complex password requirements
+- Monitor network access control measures to detect and prevent unauthorized access attempts
+- Implement network segmentation and access control policies to limit the potential impact of exploitation
+- Regularly audit and test system security to identify and address any additional vulnerabilities or weaknesses.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sommario:
+
+Una vulnerabilità nota come "OpenSSH X11 Forwarding Session Hijacking" è stata identificata nell'implementazione SSH dell'host remoto, con una versione precedente a 5.0. Questo problema consente a un utente locale con accesso per dirottare le sessioni X11 a causa di un collegamento improprio delle porte TCP sull'interfaccia IPv6 locale quando le porte corrispondenti sull'interfaccia IPv4 sono già in uso. Il punteggio CVSS3 per questa vulnerabilità è 6.9 e il livello di gravità è classificato come rischio medio (2) con un fattore di rischio. Il vettore CVSS3 è "CVSS2AV:L/AC:M/Au:N/C:C/I:C/A:C". La soluzione per mitigare questo problema è l'aggiornamento a OpenSSH versione 5.0 o successiva. Per ulteriori esami vanno indicati i seguenti indirizzi IP e porte: ['10.16.2.18', 'tcp/22'], ['192.168.2.18', 'tcp/22'], ['77.44.11.18', 'tcp/22'] e ['22.34.18.18', 'tcp/22'].
+
+Descrizione:
+
+La vulnerabilità OpenSSH X11 Forwarding Session Hijacking consente agli utenti locali con accesso di dirottare le sessioni X11 a causa di un collegamento improprio delle porte TCP sull'interfaccia IPv6 locale quando le porte corrispondenti sull'interfaccia IPv4 sono già in uso. Questo problema è presente nelle versioni SSH precedenti a 5.0. La vulnerabilità consente a un utente malintenzionato di ottenere potenzialmente l'accesso non autorizzato alle sessioni X11 attive sfruttando il meccanismo di associazione della porta improprio. Ciò può comportare un completo compromesso delle informazioni sensibili, nonché l'accesso al sistema e la divulgazione dei dati.
+
+Soluzione:
+
+Per mitigare questo problema, si consiglia di aggiornare l'implementazione SSH alla versione 5.0 o successiva. Ciò fornirà gli aggiornamenti e le patch necessari per risolvere questa vulnerabilità e migliorare la sicurezza generale del sistema. L'attuazione di misure di controllo dell'accesso alla rete più restrittive e di politiche di autenticazione degli utenti può anche essere implementata per mitigare ulteriormente il rischio di sfruttamento. Dovrebbero essere effettuati regolari audit di sicurezza e monitoraggio per garantire l'efficacia di tali misure.
+
+Punteggio CVSS3: 6,9
+
+Vettore di CVSS3: "CVSS2AV: L/AC: M/Au: N/C: C/I: C/A: C"
+
+- AV: (A)disponibilità - Nessun impatto sulla disponibilità del sistema
+- AC: (A) Ecces Vector - (L)ocal (cioè, l'attaccante deve avere accesso locale)
+- AU: (N)o autenticazione necessaria per sfruttare la vulnerabilità
+- C: (C) Riservatezza - (C) compromesso di informazioni e dati sensibili
+- I: (C) Integrità - (C) compromesso di configurazione del sistema e integrità dei dati
+- A: (C) Riservatezza - (C) Compromesso di riservatezza
+
+Fattore di rischio: Medio (2)
+
+Il livello di rischio medio è determinato dal potenziale impatto sulla riservatezza e sull'integrità, nonché dalla facilità di sfruttamento. Mentre il vettore di attacco è locale, la gravità è aumentata a causa del potenziale compromesso di informazioni e dati sensibili. È opportuno adottare misure proattive per affrontare questa vulnerabilità il più presto possibile.
+
+Azioni consigliate:
+
+- Rivedere e aggiornare regolarmente le configurazioni SSH per garantire che venga utilizzata l'ultima versione
+- Implementare criteri di autenticazione utente, come l'autenticazione a più fattori e requisiti di password complessi
+Monitorare le misure di controllo degli accessi di rete per rilevare e prevenire tentativi di accesso non autorizzati
+- Implementare politiche di segmentazione della rete e controllo degli accessi per limitare il potenziale impatto dello sfruttamento
+- Controllare e testare regolarmente la sicurezza del sistema per identificare e risolvere eventuali vulnerabilità o debolezze aggiuntive.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OpenSSH &lt; 5.7 Multiple Vulnerabilities
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: Our network contains several servers running OpenSSH versions prior to 5.7, which are vulnerable to multiple security issues. Firstly, versions before 5.7 may have a security bypass vulnerability in the J-PAKE protocol due to insufficient parameter validation, which allows attackers to bypass authentication without the shared secret when J-PAKE support is enabled (CVE-2010-4478). This vulnerability is currently experimental and disabled by default, but Nessus has not verified whether J-PAKE is enabled. Secondly, the auth_parse_options function in auth-options.c in sshd provides debug messages containing sensitive information about authorized_keys options, which can be accessed by authenticated users (CVE-2012-0814). The CVSS3 score for these vulnerabilities is 7.5 and the severity level is medium (3). The vector is CVSS2#AV:N/AC:L/Au:N/C:P/I:P. The risk factor is high, and the recommended solution is to upgrade to OpenSSH 5.7 or later. IP addresses and ports affected are as follows: 10.16.2.18 (tcp/22), 192.168.2.18 (tcp/22), 77.44.11.18 (tcp/22), and 22.34.18 (tcp/22).
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Riepilogo: La nostra rete contiene diversi server che eseguono versioni OpenSSH prima di 5.7, che sono vulnerabili a molteplici problemi di sicurezza. In primo luogo, le versioni precedenti a 5.7 potrebbero avere una vulnerabilità di bypass di sicurezza nel protocollo J-PAKE a causa della convalida dei parametri insufficiente, che consente agli aggressori di bypassare l'autenticazione senza il segreto condiviso quando il supporto J-PAKE è abilitato (CVE-2010-4478). Questa vulnerabilità è attualmente sperimentale e disabilitata per impostazione predefinita, ma Nessus non ha verificato se J-PAKE è abilitato. In secondo luogo, la funzione auth_parse_options in auth-options.c in sshd fornisce messaggi di debug contenenti informazioni sensibili sulle opzioni authorized_keys, a cui è possibile accedere da utenti autenticati (CVE-2012-0814). Il punteggio CVSS3 per queste vulnerabilità è 7.5 e il livello di gravità è medio (3). Il vettore è CVSS2AV:N/AC:L/Au:N/C:P/I:P. Il fattore di rischio è elevato e la soluzione consigliata è l'aggiornamento a OpenSSH 5.7 o versioni successive. Gli indirizzi IP e le porte interessate sono i seguenti: 10.16.2.18 (tcp/22), 192.168.2.18 (tcp/22), 77.44.11.18 (tcp/22) e 22.34.18 (tcp/22).
+ Lista mancanti:
+ Host: 22.34.18.18 Port:tcp/22
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OpenSSH &lt; 6.6 Multiple Vulnerabilities
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: The OpenSSH service running on the remote hosts with versions prior to 6.6 is susceptible to multiple vulnerabilities, including a memory corruption issue caused by insufficient initialization of data structures in the presence of modified makefile.inc for J-PAKE protocol (CVE-2014-1692) and an environmental bypass flaw in the 'AcceptEnv' setting (CVE-2014-2532). Nessus has not tested for these vulnerabilities but has confirmed the outdated software version. The Common Vulnerability Scoring System (CVSS) 3.0 base score for these vulnerabilities is 7.5, indicating high severity with a network/low adversary complexity, local/authentication required/partial/preauthorized access vector, confidentiality/partial/integrity/partial confidentiality, and availability/partial availability. It is recommended to address this risk by upgrading to OpenSSH version 6.6 or higher to mitigate these issues. IP addresses with SSH services running on port 22 include 10.16.2.18, 192.168.2.18, 77.44.11.18, and 22.34.18.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Riepilogo: Il servizio OpenSSH in esecuzione sugli host remoti con versioni precedenti a 6.6 è suscettibile a molteplici vulnerabilità, tra cui un problema di corruzione della memoria causato da un'inizializzazione insufficiente delle strutture dati in presenza di makefile.inc modificato per il protocollo J-PAKE (CVE-2014-1692) e un difetto di bypass ambientale nell'impostazione 'AccettaEnv' (CVE-2014-2532). Nessus non ha testato queste vulnerabilità, ma ha confermato la versione del software obsoleta. Il punteggio base del Common Vulnerability Scoring System (CVSS) 3.0 per queste vulnerabilità è 7.5, indicando un'elevata gravità con una complessità di rete/bassa avversaria, un vettore di accesso locale/autenticazione richiesto/parziale/preautorizzato, riservatezza/parziale/integrità/confidenzialità parziale e disponibilità/disponibilità parziale. Si consiglia di affrontare questo rischio aggiornando alla versione 6.6 o superiore di OpenSSH per mitigare questi problemi. Gli indirizzi IP con servizi SSH in esecuzione sulla porta 22 includono 10.16.2.18, 192.168.2.18, 77.44.11.18 e 22.34.18.
+ Lista mancanti:
+ Host: 22.34.18.18 Port:tcp/22
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OpenSSH &lt; 6.9 Multiple Vulnerabilities
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: Our network has identified multiple vulnerabilities in the OpenSSH service running on several devices with versions prior to 6.9, including CVE-2015-5352, which allows remote attackers to bypass timeouts and XSECURITY restrictions through the x11_open_helper() function in channels.c. Additionally, weaknesses in agent locking have been addressed by implementing measures such as increasing failure delay, storing salted hashes, and utilizing timing-safe comparisons. Another out-of-bounds read error exists in parsing the EscapeChar configuration option, and an out-of-bounds read error in handling incorrect pattern lengths can result in denial of service or sensitive information disclosure. The CVSS3 score for these vulnerabilities is 8.5 and the severity level is high. The recommended solution to mitigate these risks is to upgrade to OpenSSH version 6.9 or later. IP addresses with SSH services on ports 22 include 10.16.2.18, 192.168.2.18, 77.44.11.18, and 22.34.18.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Riepilogo: La nostra rete ha identificato più vulnerabilità nel servizio OpenSSH in esecuzione su più dispositivi con versioni precedenti al 6.9, tra cui CVE-2015-5352, che consente agli aggressori remoti di bypassare i timeout e le restrizioni XSECURITY attraverso la funzione x11_open_helper() nei canali. Inoltre, le debolezze nel blocco degli agenti sono state affrontate implementando misure come l'aumento del ritardo di guasto, la conservazione degli hash salati e l'utilizzo di confronti sicuri per i tempi. Un altro errore di lettura out-of-bounds esiste nell'analisi dell'opzione di configurazione EscapeChar e un errore di lettura out-of-bounds nella gestione delle lunghezze di modello errate può causare la negazione del servizio o la divulgazione di informazioni sensibili. Il punteggio CVSS3 per queste vulnerabilità è 8.5 e il livello di gravità è alto. La soluzione consigliata per mitigare questi rischi è l'aggiornamento a OpenSSH versione 6.9 o successiva. Gli indirizzi IP con i servizi SSH sulle porte 22 includono 10.16.2.18, 192.168.2.18, 77.44.11.18 e 22.34.18.
+ Lista mancanti:
+ Host: 22.34.18.18 Port:tcp/22
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OpenSSH &lt; 7.0 Multiple Vulnerabilities
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: Multiple vulnerabilities have been identified in versions of OpenSSH prior to 7.0, including a security bypass in keyboard-interactive authentication, a local impersonation attack through improper handling of username data in MONITOR_REQ_PAM_INIT_CTX requests (affecting only Portable OpenSSH), and a local privilege escalation via use-after-free error in MONITOR_REQ_PAM_FREE_CTX requests (also affecting only Portable OpenSSH). These vulnerabilities allow for brute-force attacks, impersonation, and command execution, respectively. The CVSS3 score for these issues is 8.5 and the severity level is high. It is strongly recommended to upgrade to OpenSSH version 7.0 or later to address these vulnerabilities. IP addresses [10.16.2.18 (tcp/22), 192.168.2.18 (tcp/22), 77.44.11.18 (tcp/22], and 22.34.18.18 (tcp/22) should be checked for OpenSSH version compatibility and updated if necessary.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Riepilogo: sono state identificate più vulnerabilità nelle versioni di OpenSSH prima del 7.0, tra cui un bypass di sicurezza nell'autenticazione attiva da tastiera, un attacco di imitazione locale attraverso la gestione impropria dei dati del nome utente nelle richieste MONITOR_REQ_PAM_INIT_CTX (che interessa solo Portable OpenSSH), e un'escalation di privilegi locali tramite errore "use-after-free" nelle richieste MONITOR_REQ_PAM_FREE_CTX (che). Queste vulnerabilità consentono attacchi di forza bruta, impersonazione ed esecuzione di comandi, rispettivamente. Il punteggio CVSS3 per questi problemi è 8.5 e il livello di gravità è alto. Si consiglia vivamente di eseguire l'aggiornamento a OpenSSH versione 7.0 o successiva per risolvere queste vulnerabilità. Gli indirizzi IP [10.6.2.18 (tcp/22), 192.168.2.18 (tcp/22), 77.44.11.18 (tcp/22] e 22.34.18.18 (tcp/22) devono essere controllati per verificare la compatibilità della versione OpenSSH e aggiornati se necessario.
+ Lista mancanti:
+ Host: 10.16.2.18 Port:tcp/22
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OpenSSH &lt; 7.2 Untrusted X11 Forwarding Fallback Security Bypass
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The identified vulnerability is "OpenSSH &lt; 7.2 Untrusted X11 Forwarding Fallback Security Bypass" which allows for a security bypass in versions prior to 7.2 due to a flaw in the ssh(1) feature that switches to trusted X11 forwarding when the SECURITY extension is disabled by the X server. This issue can enable untrusted X11 connections, potentially exploited by remote attackers. The severity of this vulnerability is rated as 3 (moderate) and carries a CVSS3 score of 7.5. The CVSS3 vector is CVSS2#AV:N/AC:L/Au:N/C:P/I:P. The risk factor is classified as high. To mitigate this risk, it is recommended to upgrade to OpenSSH version 7.2 or later. The following IP addresses and SSH ports require immediate attention: ['10.16.2.18', 'tcp/22'], ['192.168.2.18', 'tcp/22'], ['77.44.11.18', 'tcp/22'], and ['22.34.18.18', 'tcp/22'].
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+La vulnerabilità identificata è "OpenSSH &lt; 7.2 Untrusted X11 Forwarding Fallback Security Bypass" che consente un bypass di sicurezza nelle versioni precedenti al 7.2 a causa di un difetto nella funzione ssh(1) che passa all'inoltro X11 attendibile quando l'estensione SICUREZZA è disabilitata dal server X. Questo problema può abilitare connessioni X11 non attendibili, potenzialmente sfruttate da aggressori remoti. La gravità di questa vulnerabilità è valutata come 3 (moderata) e ha un punteggio CVSS3 di 7,5. Il vettore CVSS3 è CVSS2AV:N/AC:L/Au:N/C:P/I:P. Il fattore di rischio è classificato come alto. Per mitigare questo rischio, si consiglia di eseguire l'aggiornamento a OpenSSH versione 7.2 o successiva. Gli indirizzi IP e le porte SSH seguenti richiedono un'attenzione immediata: ['10.16.2.18', 'tcp/22'], ['192.168.2.18', 'tcp/22'], ['77.44.11.18', 'tcp/22'] e ['22.34.18.18', 'tcp/22'].
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OpenSSH &lt; 7.2p2 X11Forwarding xauth Command Injection
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: The OpenSSH &lt; 7.2p2 X11Forwarding xauth Command Injection vulnerability allows authenticated remote attackers to execute arbitrary commands or access sensitive files through the injection of malicious xauth credentials. This issue arises due to insufficient input sanitization in the handling of X11 authentication credentials. The severity level is rated as medium with a CVSS3 score of 5.5 and the CVSS3 vector is CVSS2#AV:N/AC:L/Au:S/C:P/I:P/A:N. The risk factor is deemed as Medium. The solution to mitigate this vulnerability is to upgrade to OpenSSH version 7.2p2 or later. Impacted systems with this vulnerability include those with OpenSSH prior to version 7.2p2 and X11Forwarding enabled. The following IP addresses and ports require immediate attention: ['10.16.2.18', 'tcp/22'], ['192.168.2.18', 'tcp/22'], ['77.44.11.18', 'tcp/22'], and ['22.34.18.18', 'tcp/22'].
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Riepilogo: La vulnerabilità OpenSSH &lt; 7.2p2 X11Forwarding xauth Command Injection consente agli aggressori remoti autenticati di eseguire comandi arbitrari o accedere a file sensibili attraverso l'iniezione di credenziali xauth dannose. Questo problema si verifica a causa di insufficiente sanificazione degli input nella gestione delle credenziali di autenticazione X11. Il livello di gravità è valutato come medio con un punteggio CVSS3 di 5,5 e il vettore CVSS3 è CVSS2AV:N/AC:L/Au:S/C:P/I:P/A:N. Il fattore di rischio è considerato medio. La soluzione per mitigare questa vulnerabilità è l'aggiornamento a OpenSSH versione 7.2p2 o successiva. I sistemi interessati da questa vulnerabilità includono quelli con OpenSSH prima della versione 7.2p2 e X11Forwarding abilitato. I seguenti indirizzi IP e porte richiedono un'attenzione immediata: ['10.16.2.18', 'tcp/22'], ['192.168.2.18', 'tcp/22'], ['77.44.11.18', 'tcp/22'] e ['22.34.18.18', 'tcp/22'].
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OpenSSH &lt; 7.3 Multiple Vulnerabilities
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The identified vulnerability in this report is the presence of OpenSSH versions below 7.3, which leaves systems susceptible to multiple security issues. Firstly, if UseLogin is enabled and PAM is configured to read.pam_environment files from home directories, a local privilege escalation can occur (CVE-2015-8325). Secondly, during authentication requests for invalid users, the program may respond quicker than for valid users, allowing an attacker to perform a timing attack to enumerate usernames (CVE-2016-6210). A denial of service vulnerability can be exploited by sending long passwords, causing excessive CPU resource consumption (CVE-2016-6515). Additionally, an unspecified flaw exists in the CBC padding oracle countermeasures that allows for a timing attack to disclose sensitive information (unspecified CVE). Nessus has not directly tested for these issues but has only relied on the reported version number. The CVSS3 score for this vulnerability is 7.2 and the CVSS3 vector is CVSS2#AV:L/AC:L/Au:N/C:C/I:C. The risk factor is considered high. The recommended solution is to upgrade to OpenSSH version 7.3 or higher to address these vulnerabilities. The following IP addresses and ports have been identified: ['10.16.2.18', 'tcp/22'], ['192.168.2.18', 'tcp/22'], ['77.44.11.18', 'tcp/22'], and ['22.34.18.18', 'tcp/22'].
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+La vulnerabilità identificata in questo rapporto è la presenza di versioni OpenSSH inferiori a 7.3, che lascia i sistemi suscettibili a più problemi di sicurezza. In primo luogo, se UseLogin è abilitato e PAM è configurato per leggere.pam_environment file da home directory, può verificarsi un'escalation di privilegi locale (CVE-2015-8325). In secondo luogo, durante le richieste di autenticazione per utenti non validi, il programma può rispondere più rapidamente che per utenti validi, consentendo a un utente malintenzionato di eseguire un attacco di temporizzazione per enumerare i nomi utente (CVE-2016-6210). Una vulnerabilità di tipo denial of service può essere sfruttata inviando password lunghe, causando un consumo eccessivo di risorse della CPU (CVE-2016-6515). Inoltre, esiste un difetto non specificato nelle contromisure di imbottitura CBC che consente un attacco di temporizzazione per rivelare informazioni sensibili (CVE non specificato). Nessus non ha testato direttamente questi problemi, ma si è affidato solo al numero di versione riportato. Il punteggio CVSS3 per questa vulnerabilità è 7.2 e il vettore CVSS3 è CVSS2AV:L/AC:L/Au:N/C:C/I:C. Il fattore di rischio è considerato elevato. La soluzione consigliata è l'aggiornamento a OpenSSH versione 7.3 o superiore per risolvere queste vulnerabilità. Sono stati identificati i seguenti indirizzi IP e porte: ['10.16.2.18', 'tcp/22'], ['192.168.2.18', 'tcp/22'], ['77.44.11.18', 'tcp/22'] e ['22.34.18.18', 'tcp/22'].
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OpenSSH &lt; 7.4 Multiple Vulnerabilities
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The identified vulnerabilities in this report relate to OpenSSH versions prior to 7.4, as confirmed by the application's banner. These issues include:
+
+1. A local attacker can exploit a flaw in ssh-agent due to loading PKCS#11 modules from untrusted paths through agent forwarding to execute arbitrary code (CVE-2016-10009). This vulnerability requires controlling the forwarded agent socket and file system access on the sshd server host.
+2. A local attacker can exploit a vulnerability in sshd's creation of forwarded Unix-domain sockets with root privileges when privilege separation is disabled, leading to privilege escalation (CVE-2016-10010).
+3. A potential information disclosure vulnerability in the sshd realloc() function may expose sensitive key material to child processes (CVE-2016-10011), although this has not been observed for normal-sized keys.
+4. A bounds check error in the shared memory manager used by pre-authenticating compression support may enable local attackers to gain elevated privileges (CVE-2016-10012).
+5. An issue with the validation of address ranges in AllowUser and DenyUsers directives at configuration load time can allow local attackers to access restricted areas with an invalid CIDR address range (CVE-2016-10013).
+
+These vulnerabilities have not been directly tested by Nessus, but have been identified based on the reported version number. The CVSS3 score for these issues is 7.5 and the vector is CVSS2#AV:N/AC:L/Au:N/C:P/I:P. The severity level is rated as high, indicating a significant risk factor. The recommended solution is to upgrade to OpenSSH version 7.4 or later to address these vulnerabilities. The following IP addresses and ports should be prioritized for remediation: 10.16.2.18 (tcp/22), 192.168.2.18 (tcp/22), 77.44.11.18 (tcp/22), and 22.34.18 (tcp/22).
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Le vulnerabilità identificate in questo rapporto si riferiscono alle versioni OpenSSH precedenti al 7.4, come confermato dal banner dell'applicazione. Questi problemi includono:
+
+1. Un utente malintenzionato locale può sfruttare un difetto in ssh-agent a causa del caricamento dei moduli PKCS11 da percorsi non attendibili attraverso l'inoltro di agenti per eseguire codice arbitrario (CVE-2016-10009). Questa vulnerabilità richiede il controllo del socket dell'agente inoltrato e l'accesso al file system sull'host del server sshd.
+2. Un utente malintenzionato locale può sfruttare una vulnerabilità nella creazione di socket di dominio Unix inoltrati con privilegi di root quando la separazione dei privilegi è disabilitata, portando ad un'escalation dei privilegi (CVE-2016-10010).
+3. Una potenziale vulnerabilità di divulgazione delle informazioni nella funzione sshd realloc() può esporre materiale chiave sensibile ai processi figlio (CVE-2016-10011), anche se questo non è stato osservato per le chiavi di dimensioni normali.
+4. Un errore di controllo dei limiti nel gestore di memoria condivisa utilizzato dal supporto di compressione pre-autenticazione può consentire agli aggressori locali di ottenere privilegi elevati (CVE-2016-10012).
+5. Un problema con la convalida degli intervalli di indirizzi nelle direttive AllowUser e DenyUser al momento del caricamento della configurazione può consentire agli aggressori locali di accedere alle aree riservate con un intervallo di indirizzi CIDR non valido (CVE-2016-10013).
+
+Queste vulnerabilità non sono state testate direttamente da Nessus, ma sono state identificate in base al numero di versione riportato. Il punteggio CVSS3 per questi problemi è 7.5 e il vettore è CVSS2AV:N/AC:L/Au:N/C:P/I:P. Il livello di gravità è valutato come alto, indicando un fattore di rischio significativo. La soluzione consigliata è l'aggiornamento alla versione 7.4 di OpenSSH o successiva per risolvere queste vulnerabilità. I seguenti indirizzi IP e porte dovrebbero essere prioritari per la correzione: 10.16.2.18 (tcp/22), 192.168.2.18 (tcp/22), 77.44.11.18 (tcp/22), e 22.34.18 (tcp/22).
+ Lista mancanti:
+ Host: 22.34.18.18 Port:tcp/22
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OpenSSH &lt; 7.5 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The identified vulnerability in this report relates to OpenSSH versions below 7.5, which is confirmed by the application's banner disclosure. This vulnerability involves an information disclosure issue in the CBC padding oracle countermeasures present in both the ssh and sshd functions, potentially leaking sensitive information. Although the OpenSSH client defaults to disabling CBC ciphers, they are still offered as low-priority options in sshd that will be removed in future releases. As Nessus has not directly tested for this issue, it is solely based on the reported version. The Common Vulnerability Scoring System (CVSS) v3 score for this vulnerability is 5.0, and the vector is CVSS2#AV:N/AC:L/Au:N/C:P/I:N. The severity level is rated as medium, indicating a moderate level of risk. The recommended solution to mitigate this vulnerability is to upgrade to OpenSSH version 7.5 or higher. The following IP addresses and ports should be prioritized for remediation: ['10.16.2.18', 'tcp/22'], ['192.168.2.18', 'tcp/22'], ['77.44.11.18', 'tcp/22'], and ['22.34.18.18', 'tcp/22'].
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+La vulnerabilità identificata in questo rapporto si riferisce alle versioni OpenSSH inferiori a 7.5, che è confermata dalla divulgazione del banner dell'applicazione. Questa vulnerabilità comporta un problema di divulgazione delle informazioni nelle contromisure oracoli di imbottitura CBC presenti sia nelle funzioni ssh che sshd, potenzialmente perdite di informazioni sensibili. Sebbene il client OpenSSH sia predefinito per disabilitare i cifrari CBC, sono ancora offerti come opzioni a bassa priorità in sshd che verranno rimosse nelle versioni future. Poiché Nessus non ha testato direttamente questo problema, si basa esclusivamente sulla versione riportata. Il punteggio Common Vulnerability Scoring System (CVSS) v3 per questa vulnerabilità è 5.0 e il vettore è CVSS2AV:N/AC:L/Au:N/C:P/I:N. Il livello di gravità è valutato come medio, indicando un livello moderato di rischio. La soluzione consigliata per mitigare questa vulnerabilità è l'aggiornamento a OpenSSH versione 7.5 o successiva. I seguenti indirizzi IP e porte dovrebbero essere prioritari per la bonifica: ['10.16.2.18', 'tcp/22'], ['192.168.2.18', 'tcp/22'], ['77.44.11.18', 'tcp/22'] e ['22.34.18.18', 'tcp/22'].
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OpenSSH &lt; 7.6
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The identified vulnerability is the existence of OpenSSH versions prior to 7.6, which is prone to a file creation restriction bypass issue in the 'process_open' function of'sftp-server.c' that enables authenticated users to generate zero-length files regardless of configuration settings. Nessus has not verified this vulnerability but has solely relied on the application's self-reported version number. The CVSS3 score for this issue is 5.0, with a CVSS3 vector of CVSS2#AV:N/AC:L/Au:N/C:N/I:P/A:N. This vulnerability is categorized as a severity level of 2, indicating a medium risk factor. To mitigate this issue, it is recommended to upgrade to OpenSSH version 7.6 or later. The following IP addresses and corresponding SSH ports have been identified as affected: ['10.16.2.18', 'tcp/22'], ['192.168.2.18', 'tcp/22'], ['77.44.11.18', 'tcp/22'], and ['22.34.18.18', 'tcp/22'].
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+La vulnerabilità identificata è l'esistenza di versioni OpenSSH precedenti al 7.6, che è soggetta a un problema di bypass di restrizione della creazione di file nella funzione 'process_open' di sftp-server.c' che consente agli utenti autenticati di generare file a lunghezza zero indipendentemente dalle impostazioni di configurazione. Nessus non ha verificato questa vulnerabilità, ma si è basata esclusivamente sul numero di versione auto-riferita dell'applicazione. Il punteggio CVSS3 per questo problema è 5.0, con un vettore CVSS3 di CVSS2AV:N/AC:L/Au:N/C:N/I:P/A:N. Questa vulnerabilità è classificata come un livello di gravità di 2, che indica un fattore di rischio medio. Per attenuare questo problema, si consiglia di eseguire l'aggiornamento a OpenSSH versione 7.6 o successiva. Sono stati identificati come interessati i seguenti indirizzi IP e le corrispondenti porte SSH: ['10.16.2.18', 'tcp/22'], ['192.168.2.18', 'tcp/22'], ['77.44.11.18', 'tcp/22'] e ['22.34.18.18', 'tcp/22'].
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OpenSSH LoginGraceTime / MaxStartups DoS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary:
+
+The OpenSSH service on the following IP addresses [10.16.2.18 (TCP port 22), 192.168.2.18 (TCP port 22), 77.44.11.18 (TCP port 22], and 22.34.18.18 (TCP port 22) is affected by a Denial of Service (DoS) vulnerability related to the LoginGraceTime and MaxStartups settings in versions of OpenSSH prior to 6.2. This issue allows an attacker to bypass these settings by repeatedly establishing multiple connections, preventing legitimate users from accessing the service. Although this plugin does not attempt to exploit the vulnerability or confirm the use of vulnerable configurations, it verifies the OpenSSH version on the remote host. The CVSS3 score is 5.0, with a severity level of medium risk. To mitigate this vulnerability, it is recommended to upgrade to OpenSSH 6.2 and review the associated server configuration settings.
+
+Description:
+
+OpenSSH, a widely-used secure network protocol for remote login, allows users to access servers securely. Versions of OpenSSH prior to 6.2 are prone to a DoS vulnerability that can be exploited by an attacker by repeatedly establishing a large number of connections. The default configuration of OpenSSH before version 6.2 is susceptible to this issue, as it does not impose a limit on the number of failed login attempts, which can lead to server resources being exhausted and causing legitimate users to be denied access. This vulnerability can be exploited by making multiple connections to the service, bypassing the LoginGraceTime and MaxStartups thresholds.
+
+CVSS3 Score:
+
+The Common Vulnerability Scoring System (CVSS) gives this vulnerability a score of 5.0. The CVSS vector is CVSS2#AV:N/AC:L/Au:N/C:N/I:N/A:P.
+
+Risk Factor:
+
+The risk factor is medium due to the potential impact on the availability of the service. Although the attacker cannot compromise data confidentiality, integrity, or availability, they can deny service to authorized users. It is essential to address this vulnerability to avoid disruption to regular service operations.
+
+Solution:
+
+The recommended solution is to upgrade to OpenSSH version 6.2 or higher to mitigate this issue. Additionally, it is recommended to review the server configuration settings associated with LoginGraceTime and MaxStartups to ensure they are set to appropriate values that match your organization's security requirements. This solution will prevent the exploitation of the vulnerability and minimize the risk of service disruption.
+
+IP Addresses:
+
+- 10.16.2.18 (TCP port 22)
+- 192.168.2.18 (TCP port 22)
+- 77.44.11.18 (TCP port 22)
+- 22.34.18.18 (TCP port 22)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Riepilogo:
+
+Il servizio OpenSSH sui seguenti indirizzi IP [10.16.2.18 (porta TCP 22), 192.168.2.18 (porta TCP 22), 77.44.11.18 (porta TCP 22] e 22.34.18.18 (porta TCP 22) è influenzato da una vulnerabilità Denial of Service (DoS) relativa alle impostazioni di LoginGraceTime e MaxStartup nelle versioni di OpenSSH prima di 6.2. Questo problema consente a un utente malintenzionato di bypassare queste impostazioni stabilendo ripetutamente più connessioni, impedendo agli utenti legittimi di accedere al servizio. Sebbene questo plugin non tenti di sfruttare la vulnerabilità o confermare l'uso di configurazioni vulnerabili, verifica la versione OpenSSH sull'host remoto. Il punteggio CVSS3 è 5.0, con un livello di gravità di rischio medio. Per mitigare questa vulnerabilità, si consiglia di eseguire l'aggiornamento a OpenSSH 6.2 e rivedere le impostazioni di configurazione del server associate.
+
+Descrizione:
+
+OpenSSH, un protocollo di rete sicuro ampiamente utilizzato per il login remoto, consente agli utenti di accedere ai server in modo sicuro. Le versioni di OpenSSH precedenti al 6.2 sono soggette a una vulnerabilità DoS che può essere sfruttata da un utente malintenzionato stabilendo ripetutamente un gran numero di connessioni. La configurazione predefinita di OpenSSH prima della versione 6.2 è suscettibile a questo problema, in quanto non impone un limite al numero di tentativi di accesso falliti, che possono portare all'esaurimento delle risorse del server e alla negazione dell'accesso agli utenti legittimi. Questa vulnerabilità può essere sfruttata effettuando più connessioni al servizio, bypassando le soglie di LoginGraceTime e MaxStartups.
+
+Punteggio CVSS3:
+
+Il Common Vulnerability Scoring System (CVSS) dà a questa vulnerabilità un punteggio di 5.0. Il vettore CVSS è CVSS2AV:N/AC:L/Au:N/C:N/I:N/A:P.
+
+Fattore di rischio:
+
+Il fattore di rischio è medio dovuto al potenziale impatto sulla disponibilità del servizio. Sebbene l'attaccante non possa compromettere la riservatezza, l'integrità o la disponibilità dei dati, può negare il servizio agli utenti autorizzati. È essenziale affrontare questa vulnerabilità per evitare interruzioni alle normali operazioni di servizio.
+
+Soluzione:
+
+La soluzione consigliata è l'aggiornamento a OpenSSH versione 6.2 o superiore per attenuare questo problema. Inoltre, si consiglia di rivedere le impostazioni di configurazione del server associate a LoginGraceTime e MaxStartups per assicurarsi che siano impostate su valori appropriati che corrispondono ai requisiti di sicurezza dell'organizzazione. Questa soluzione impedirà lo sfruttamento della vulnerabilità e ridurrà al minimo il rischio di interruzione del servizio.
+
+Indirizzi IP:
+
+- 10.16.2.18 (TCP port 22)
+- 192.168.2.18 (TCP port 22)
+- 77.44.11.18 (TCP port 22)
+- 22.34.18.18 (TCP port 22)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OpenSSH &lt; 5.2 CBC Plaintext Disclosure
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: Our network contains several servers running OpenSSH versions prior to 5.2, which are susceptible to the CBC Plaintext Disclosure vulnerability (CVE-2012-1771). This vulnerability allows a man-in-the-middle attacker to reveal up to 32 bits of plaintext from encrypted SSH sessions in standard configuration, potentially disclosing sensitive information. The CVSS3 score for this vulnerability is 4.0 and the severity level is medium, with a risk factor of Medium. To mitigate this issue, it is recommended to update OpenSSH to version 5.2 or higher. The following IP addresses and ports should be prioritized for patching: 10.16.2.18 (TCP port 22), 192.168.2.18 (TCP port 22), 77.44.11.18 (TCP port 22, and 22.34.18.18 (TCP port 22). The CVSS3 vector for this vulnerability is CVSS2#AV:N/AC:L/Au:S/C:N/I:P/A:N.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Riepilogo: La nostra rete contiene diversi server che eseguono versioni OpenSSH prima di 5.2, che sono suscettibili alla vulnerabilità CBC Plaintext Disclosure (CVE-2012-1771). Questa vulnerabilità consente a un utente malintenzionato di rivelare fino a 32 bit di testo normale da sessioni SSH crittografate in configurazione standard, rivelando potenzialmente informazioni sensibili. Il punteggio CVSS3 per questa vulnerabilità è 4.0 e il livello di gravità è medio, con un fattore di rischio di Medium. Per attenuare questo problema, si consiglia di aggiornare OpenSSH alla versione 5.2 o successiva. Per la patching dovrebbero essere prioritari i seguenti indirizzi IP e porte: 10.16.2.18 (porta TCP 22), 192.168.2.18 (porta TCP 22), 77.44.11.18 (porta TCP 22 e 22.34.18.18 (porta TCP 22). Il vettore CVSS3 per questa vulnerabilità è CVSS2AV:N/AC:L/Au:S/C:N/I:P/A:N.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SNMP &apos;GETBULK&apos; Reflection DDoS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: Our network is experiencing a vulnerability known as SNMP 'GETBULK' Reflection DDoS, where the SNMP daemon is responding excessively to 'GETBULK' requests with a high number of repetitions. This can be exploited by remote attackers to launch a reflected distributed denial of service attack on other systems. The severity level is rated as medium, with a CVSS3 score of 5.0 and vector CVSS2#AV:N/AC:L/Au:N/C:N/I:N/A:P. The recommended solution is to disable SNMP service if it's not in use or restrict and monitor access to it, as well as changing the default community string. This vulnerability affects the following IP addresses and ports: 10.16.2.14 (UDP/161), 10.16.2.13 (UDP/161), 10.16.2.12 (UDP/161), 192.168.2.14 (UDP/161), 192.168.2.13 (UDP/161), 192.168.2.12 (UDP/161), 77.44.11.14 (UDP/161), 77.44.11.13 (UDP/161), 77.44.11.12 (UDP/161), 22.34.18.14 (UDP/161), 22.34.18.13 (UDP/161), and 22.34.18.12 (UDP/161).
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Riepilogo: La nostra rete sta vivendo una vulnerabilità nota come SNMP 'GETBULK' Reflection DDoS, in cui il demone SNMP sta rispondendo eccessivamente alle richieste 'GETBULK' con un elevato numero di ripetizioni. Questo può essere sfruttato dagli aggressori remoti per lanciare un attacco distribuito di tipo denial of service su altri sistemi. Il livello di gravità è valutato come medio, con un punteggio CVSS3 di 5.0 e un CVSS2AV:N/AC:L/Au:N/C:N/I:N/A:P. La soluzione consigliata è disabilitare il servizio SNMP se non è in uso o limitare e monitorare l'accesso ad esso, nonché modificare la stringa di comunità predefinita. Questa vulnerabilità riguarda i seguenti indirizzi IP e porte: 10.16.2.14 (UDP/161), 22.6.2.13 (UDP/161), 10.6.2.112 (UDP/161), 192.168.2.14 (UDP/161), 192.168.2.13 (UDP/161), 192.168.2.12 (UDP/161), 77.44.11.14 (UDP/161), 77.44.11.13 (UDP/161)
+ Lista mancanti:
+ Host: 10.16.2.13 Port:udp/161
+  Host: 10.16.2.12 Port:udp/161
+  Host: 77.44.11.12 Port:udp/161
+  Host: 22.34.18.14 Port:udp/161
+  Host: 22.34.18.13 Port:udp/161
+  Host: 22.34.18.12 Port:udp/161
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SSL Version 2 and 3 Protocol Detection
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary:
+
+Vulnerability: SSL Version 2 and 3 Protocol Detection
+
+Description: The remote service is accepting connections secured with SSL 2.0 and/or SSL 3.0, which are affected by cryptographic flaws such as an insecure padding scheme with CBC ciphers and insecure session renegotiation and resumption schemes. These versions are no longer considered secure by NIST and can be exploited by attackers to conduct man-in-the-middle attacks or decrypt communications. As these protocols have been deemed unacceptable for secure communications by the PCI SSC, it is highly recommended to disable them.
+
+Severity: Critical (4)
+CVSS3 score: 10.0
+CVSS3 vector: CVSS2#AV:N/AC:L/Au:N/C:C/I:C
+
+Solution: Consult the application's documentation to disable SSL 2.0 and 3.0 and use TLS 1.2 (with approved cipher suites) or higher instead.
+
+IP and Ports:
+- 10.16.2.3 (tcp/443)
+- 10.16.2.2 (tcp/443)
+- 10.16.2.1 (tcp/443)
+- 192.168.2.3 (tcp/443)
+- 192.168.2.2 (tcp/443)
+- 192.168.2.1 (tcp/443)
+- 77.44.11.3 (tcp/443)
+- 77.44.11.2 (tcp/443)
+- 77.44.11.1 (tcp/443)
+- 22.34.18.3 (tcp/443)
+- 22.34.18.2 (tcp/443)
+- 22.34.18.1 (tcp/443)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sommario:
+
+Vulnerabilità: SSL versione 2 e 3 Protocollo di rilevamento
+
+Descrizione: Il servizio remoto accetta connessioni protette con SSL 2.0 e/o SSL 3.0, che sono interessate da difetti crittografici come uno schema di imbottitura non sicuro con cifrari CBC e schemi di rinegoziazione e ripresa della sessione non sicuri. Queste versioni non sono più considerate sicure dal NIST e possono essere sfruttate dagli aggressori per condurre attacchi man-in-the-middle o decrittografare le comunicazioni. Poiché questi protocolli sono stati ritenuti inaccettabili per le comunicazioni sicure da PCI SSC, è altamente raccomandato disabilitarli.
+
+Severità: critica (4)
+Punteggio CVSS3: 10.0
+Vettore CVSS3: CVSS2AV:N/AC:L/Au:N/C:C/I:C
+
+Soluzione: consultare la documentazione dell'applicazione per disabilitare SSL 2.0 e 3.0 e utilizzare invece TLS 1.2 (con suite di cifratura approvate) o superiore.
+
+IP e porte:
+- 10.16.2.3 (tcp/443)
+- 10.16.2.2 (tcp/443)
+- 10.16.2.1 (tcp/443)
+- 192.168.2.3 (tcp/443)
+- 192.168.2.2 (tcp/443)
+- 192.168.2.1 (tcp/443)
+- 77.44.11.3 (tcp/443)
+- 77.44.11.2 (tcp/443)
+- 77.44.11.1 (tcp/443)
+- 22.34.18.3 (tcp/443)
+- 22.34.18.2 (tcp/443)
+- 22.34.18.1 (tcp/443)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SSLv3 Padding Oracle On Downgraded Legacy Encryption Vulnerability (POODLE)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The identified vulnerability is the SSLv3 Padding Oracle On Downgraded Legacy Encryption (POODLE) issue, which allows man-in-the-middle (MitM) attackers to disclose sensitive information through selective decryption of ciphertexts in SSLv3-encrypted connections. This vulnerability stems from the handling of padding bytes during decryption in CBC mode in SSLv3. Attackers can decrypt a single byte of ciphertext after 256 attempts by repeatedly sending the same data over newly created SSLv3 connections when both client and server support SSLv3, regardless of support for TLSv1 or newer protocols. Disabling SSLv3 is the only complete mitigation, as this issue exists in the SSLv3 specification, not specific implementations. The TLS Fallback SCSV mechanism prevents version rollback attacks, but it requires support from both client and service. Until SSLv3 can be disabled, services that require it should enable this mechanism. The CVSS3 score is 4.3, with a severity rating of 2 and a risk factor of Medium. IP addresses and ports affected by this vulnerability include 10.16.2.3, 10.16.2.2, 10.16.2.1, 192.168.2.3, 192.168.2.2, 192.168.2.1, 77.44.11.3, 77.44.11.2, 77.44.11.1, 22.34.18.3, 22.34.18.2, and 22.34.18.1 on TCP port 443.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+La vulnerabilità identificata è il problema di SSLv3 Padding Oracle On Downgraded Legacy Encryption (POODLE), che consente agli aggressori man-in-the-middle (MitM) di divulgare informazioni sensibili attraverso la decrittografia selettiva dei testi cifrati nelle connessioni crittografate SSLv3. Questa vulnerabilità deriva dalla gestione dei byte di imbottitura durante la decrittografia in modalità CBC in SSLv3. Gli aggressori possono decrittografare un singolo byte di testo cifrato dopo 256 tentativi inviando ripetutamente gli stessi dati su connessioni SSLv3 appena create quando sia il client che il server supportano SSLv3, indipendentemente dal supporto per protocolli TLSv1 o più recenti. La disattivazione di SSLv3 è l'unica mitigazione completa, poiché questo problema esiste nelle specifiche SSLv3, non implementazioni specifiche. Il meccanismo TLS Fallback SCSV previene gli attacchi di rollback della versione, ma richiede il supporto sia da parte del client che del servizio. Fino a quando SSLv3 non può essere disabilitato, i servizi che lo richiedono dovrebbero abilitare questo meccanismo. Il punteggio CVSS3 è 4.3, con un punteggio di gravità di 2 e un fattore di rischio di Medium. Gli indirizzi IP e le porte interessate da questa vulnerabilità includono 10.16.2.3, 10.16.2.2, 10.16.2.1, 192.168.2.3, 192.168.2.2, 192.168.2.1, 74.44.1, 74.44.11.2, 77.44.11.1, 22.34.18.2, e 22.34.18.1 sulla porta TCP 443.
+ Lista mancanti:
+ Host: 77.44.11.3 Port:tcp/443
+  Host: 77.44.11.2 Port:tcp/443
+  Host: 22.34.18.3 Port:tcp/443
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SSL RC4 Cipher Suites Supported (Bar Mitzvah)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: Our network is experiencing a medium-risk vulnerability called "SSL RC4 Cipher Suites Supported (Bar Mitzvah)" where certain hosts are supporting the use of RC4 cipher suites in SSL/TLS communication. RC4, a flawed cipher, generates biased pseudo-random streams that may reveal plaintext patterns upon repeated encryption, particularly in the case of HTTP cookies. This issue allows an attacker with access to multiple ciphertexts to infer plaintext. The CVSS3 score is 4.3 and the risk factor is medium. To mitigate this, we recommend reconfiguring affected applications to avoid using RC4 ciphers, preferably switching to AES-GCM suites in TLS 1.2. This vulnerability affects the following IP addresses and ports: 10.16.2.3 (tcp/443), 10.16.2.2 (tcp/443), 10.16.2.1 (tcp/443), 192.168.2.3 (tcp/443), 192.168.2.2 (tcp/443), 77.44.11.3 (tcp/443), 77.44.11.2 (tcp/443), 77.44.11.1 (tcp/443), 22.34.18.3 (tcp/443), 22.34.18.2 (tcp/443), and 22.34.18.1 (tcp/443. To address this vulnerability, we suggest avoiding RC4 ciphers and implementing AES-GCM suites that offer stronger encryption capabilities, provided they are supported by the web server and browser. This issue has been categorized with a severity level of 2. The CVSS3 vector is CVSS2#AV:N/AC:M/Au:N/C:P/I:N.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Riepilogo: La nostra rete sta vivendo una vulnerabilità a medio rischio chiamata "SSL RC4 Cipher Suites Supported (Bar Mitzvah)" in cui alcuni host supportano l'uso di suite di cifratura RC4 nella comunicazione SSL / TLS. RC4, un cifrario difettoso, genera flussi pseudo-casuali distorti che possono rivelare modelli di testo normale su crittografia ripetuta, in particolare nel caso di cookie HTTP. Questo problema consente a un utente malintenzionato con accesso a più testi cifrati di dedurre il testo in chiaro. Il punteggio CVSS3 è 4.3 e il fattore di rischio è medio. Per mitigare questo, si consiglia di riconfigurare le applicazioni interessate per evitare di utilizzare i cifrari RC4, preferibilmente passando a suite AES-GCM in TLS 1.2. Questa vulnerabilità riguarda i seguenti indirizzi IP e porte: 10.16.2.3 (tcp/443), 10.16.2.2 (tcp/443), 10.16.2.1 (tcp/443), 192.168.2.3 (tcp/443), 192.168.2.2 (tcp/443), 77.44.1.1 (tcp/443), 77.44.1.1 (tcp/443), 74.41.1 (27.1). Per risolvere questa vulnerabilità, suggeriamo di evitare i cifrari RC4 e implementare suite AES-GCM che offrono funzionalità di crittografia più forti, a condizione che siano supportate dal server Web e dal browser. Questo problema è stato classificato con un livello di gravità di 2. Il vettore CVSS3 è CVSS2AV:N/AC:M/Au:N/C:P/I:N.
+ Lista mancanti:
+ Host: 192.168.2.1 Port:tcp/443
+  Host: 77.44.11.3 Port:tcp/443
+  Host: 77.44.11.2 Port:tcp/443
+  Host: 77.44.11.1 Port:tcp/443
+  Host: 22.34.18.3 Port:tcp/443
+  Host: 22.34.18.2 Port:tcp/443
+  Host: 22.34.18.1 Port:tcp/443
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SSL Weak Cipher Suites Supported
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: Our network has several servers with a vulnerability related to SSL Weak Cipher Suites Supported, which allows attackers on the same physical network to easily exploit weak encryption methods. The CVSS3 score for this issue is 4.3, classified as a severity level of 2 (medium risk), with a CVSS3 vector of CVSS2#AV:N/AC:M/Au:N/C:P/I:N/A:N. To mitigate this vulnerability, we recommend reconfiguring the affected applications to avoid using weak ciphers. This vulnerability affects the following IP addresses and ports: [10.16.2.3:443], [10.16.2.2:443], [10.16.2.1:443], [192.168.2.3:443], [192.168.2.2:443], [192.168.2.1:443], [77.44.11.3:443], [77.44.11.2:443], [77.44.11.1:443], [22.34.18.3:443], [22.34.18.2:443], and [22.34.18.1:443]. We urge immediate attention to address this issue as the risk factor is considered medium.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sommario: La nostra rete ha diversi server con una vulnerabilità legata a SSL Weak Cipher Suites Supported, che consente agli aggressori sulla stessa rete fisica di sfruttare facilmente i metodi di crittografia deboli. Il punteggio CVSS3 per questo problema è 4.3, classificato come livello di gravità di 2 (rischio medio), con un vettore CVSS3 di CVSS2AV:N/AC:M/Au:N/C:P/I:N/A:N. Per mitigare questa vulnerabilità, si consiglia di riconfigurare le applicazioni interessate per evitare l'uso di cifrari deboli. Questa vulnerabilità riguarda i seguenti indirizzi IP e porte: [10.16.2.3:443], [10.16.2.2:443], [10.16.2.1:443], [192.168.2.3:443], [192.168.2.2:443], [192.168.2.1:443], [77.44.1.3:443], [77.418.1.2:443], [77.44.1.1.4:443]. Esortiamo l'attenzione immediata per affrontare questo problema in quanto il fattore di rischio è considerato medio.
+ Lista mancanti:
+ Host: 77.44.11.3 Port:tcp/443
+  Host: 77.44.11.2 Port:tcp/443
+  Host: 77.44.11.1 Port:tcp/443
+  Host: 22.34.18.3 Port:tcp/443
+  Host: 22.34.18.2 Port:tcp/443
+  Host: 22.34.18.1 Port:tcp/443
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SSL Certificate Expiry
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Summary: SSL Certificate Expiry
+
+Vulnerability: The SSL certificates on several network devices are approaching or have already expired, posing a Medium risk to the confidentiality and integrity of data transmitted over HTTPS connections. This vulnerability is assessed with a CVSS3 score of 5.0 and a CVSS3 vector of CVSS2#AV:N/AC:L/Au:N/C:N/I:P/A:N. The severity level is 2. To mitigate this issue, it is recommended to purchase or generate a new SSL certificate to replace the expired ones.
+
+Affected IPs and Ports:
+- 10.16.2.3 (TCP/443)
+- 10.16.2.2 (TCP/443)
+- 10.16.2.1 (TCP/443)
+- 192.168.2.3 (TCP/443)
+- 192.168.2.2 (TCP/443)
+- 192.168.2.1 (TCP/443)
+- 77.44.11.3 (TCP/443)
+- 77.44.11.2 (TCP/443)
+- 77.44.11.1 (TCP/443)
+- 22.34.18.3 (TCP/443)
+- 22.34.18.2 (TCP/443)
+- 22.34.18.1 (TCP/443)
+
+Description: The SSL Certificate Expiry vulnerability refers to the expiration of SSL certificates that secure network communications through HTTPS. These certificates authenticate the identity of a website or server and encrypt data transmissions. When a certificate expires, the connection is deemed insecure, and browsers or applications may display warnings or error messages. This can lead to unauthorized access to sensitive data and man-in-the-middle attacks. It is essential to replace expired certificates promptly to maintain secure communications and prevent potential data breaches.
+
+Solution: To address this issue, network administrators should obtain or generate new SSL certificates from trusted Certificate Authorities (CAs) and install them on the affected devices. Alternatively, self-signed certificates can be used, but they provide less assurance of authenticity and should be implemented with caution. Regular certificate expiration monitoring and renewal schedules should be established to avoid future lapses.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Riepilogo: Scadenza certificato SSL
+
+Vulnerabilità: i certificati SSL su più dispositivi di rete si stanno avvicinando o sono già scaduti, ponendo un rischio medio alla riservatezza e all'integrità dei dati trasmessi tramite connessioni HTTPS. Questa vulnerabilità è valutata con un punteggio CVSS3 di 5.0 e un vettore CVSS3 di CVSS2AV:N/AC:L/Au:N/C:N/I:P/A:N. Il livello di gravità è 2. Per mitigare questo problema, si consiglia di acquistare o generare un nuovo certificato SSL per sostituire quelli scaduti.
+
+IP e porte interessate:
+- 10.16.2.3 (TCP/443)
+- 10.16.2.2 (TCP/443)
+- 10.16.2.1 (TCP/443)
+- 192.168.2.3 (TCP/443)
+- 192.168.2.2 (TCP/443)
+- 192.168.2.1 (TCP/443)
+- 77.44.11.3 (TCP/443)
+- 77.44.11.2 (TCP/443)
+- 77.44.11.1 (TCP/443)
+- 22.34.18.3 (TCP/443)
+- 22.34.18.2 (TCP/443)
+- 22.34.18.1 (TCP/443)
+
+Descrizione: La vulnerabilità SSL Certificate Expiry si riferisce alla scadenza dei certificati SSL che proteggono le comunicazioni di rete tramite HTTPS. Questi certificati autenticano l'identità di un sito web o server e crittografano le trasmissioni di dati. Quando un certificato scade, la connessione è considerata insicura e i browser o le applicazioni possono visualizzare avvisi o messaggi di errore. Ciò può portare ad un accesso non autorizzato a dati sensibili e attacchi man-in-the-middle. È essenziale sostituire tempestivamente i certificati scaduti per mantenere comunicazioni sicure e prevenire potenziali violazioni dei dati.
+
+Soluzione: per risolvere questo problema, gli amministratori di rete dovrebbero ottenere o generare nuovi certificati SSL da autorità di certificazione fidate (CA) e installarli sui dispositivi interessati. In alternativa, possono essere utilizzati certificati autofirmati, ma forniscono meno garanzia di autenticità e dovrebbero essere implementati con cautela. Dovrebbero essere stabiliti regolari programmi di monitoraggio e rinnovo della scadenza del certificato per evitare futuri ritardi.
+
+
+ tempo di esecuzione del programma: 146,58 min
